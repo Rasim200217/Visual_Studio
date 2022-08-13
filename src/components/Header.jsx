@@ -3,6 +3,8 @@ import React from "react";
 import { ImageCarousel } from "./ImageCarousel";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 
+import "../scss/Header.scss";
+
 import image1 from "../assets/slide_1.jpg";
 import image2 from "../assets/slide_2.jpg";
 import image3 from "../assets/slide_3.jpg";
@@ -25,13 +27,12 @@ export const Header = () => {
                 Универсальная фотостудия в Ташкенте
               </span>
               <span>
-                {" "}
                 подойдёт под <br /> любые виды съёмок от съемок одежды до
                 портретных съемок
               </span>
             </p>
           </div>
-          <button className="font-bold text-white px-12 py-5 border border-yellow-300 rounded-full text-base mt-10">
+          <button className="font-bold text-white px-12 py-5 border border-yellow-300 rounded-full text-base mt-10 btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
             Забронировать
           </button>
         </div>
