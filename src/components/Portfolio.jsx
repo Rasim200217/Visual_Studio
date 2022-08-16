@@ -17,7 +17,6 @@ const data = [
   { id: 1, imgSrc: Img1 },
   { id: 2, imgSrc: Img2 },
   { id: 3, imgSrc: Img3 },
-  { id: 4, imgSrc: Img4 },
 ];
 
 const urlVideo = [
@@ -86,6 +85,14 @@ export const Portfolio = () => {
                 </li>
               );
             })}
+            <div className=" bg-black  cursor-pointer transition-allease-in relative ">
+              <img
+                className="w-full h-72 rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
+                src={Img4}
+                alt=""
+              />
+              <p className="text-pos">+30</p>
+            </div>
           </ul>
         </div>
 

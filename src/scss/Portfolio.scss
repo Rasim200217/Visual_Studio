@@ -64,3 +64,9 @@
     width: 400px;
   }
 }
+.text-pos {
+  transition: 0.1s ease-in all;
+  @apply absolute text-white text-6xl font-light hover:text-yellow-300;
+  top: 40%;
+  left: 20%;
+}
