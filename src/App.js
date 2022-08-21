@@ -1,6 +1,8 @@
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Intro } from "./components/Intro";
 import { Navbar } from "./components/Navbar";
+import { OurTeam } from "./components/OurTeam";
 import { PhotoStudio } from "./components/PhotoStudio";
 import { Portfolio } from "./components/Portfolio";
 import { StudioRental } from "./components/StudioRental";
@@ -16,6 +18,8 @@ function App() {
       <TheVisualStudio />
       <Intro />
       <StudioRental />
+      <OurTeam />
+      <Footer />
     </div>
   );
 }

@@ -14,7 +14,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-20 px-12 bg-black text-white">
+    <div className="flex justify-between items-center h-20 bg-black text-white px-12">
       <div className="flex">
         <div>
           <img src={Logo} className="h-10 my-2" />

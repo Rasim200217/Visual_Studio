@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <div>
       <ImageCarousel images={[image1, image2, image3]} />
-      <div className="flex justify-between h-496 px-12 items-center bg-black bg-opacity-70 absolute top-20 w-full">
+      <div className="flex justify-between h-496 px-12 md:px-28 items-center bg-black bg-opacity-70 absolute top-20 w-full">
         <div>
           <div>
             <p className="font-medium md:text-2xl text-white text-xl">

@@ -32,10 +32,6 @@ const urlVideo = [
     url: "https://player.vimeo.com/video/732100843?h=3bf74103b7&title=0",
     imgSrc: Img3,
   },
-  {
-    url: "https://player.vimeo.com/video/732180675?h=db862d66aa&title=0",
-    imgSrc: Img4,
-  },
 ];
 
 export const Portfolio = () => {
@@ -60,15 +56,15 @@ export const Portfolio = () => {
           size={20}
         />
       </div>
-      <div className="text-white px-12 pt-20 secondaryColor h-auto pb-20">
+      <div className="text-white px-12 pt-20 secondaryColor h-auto pb-20 ">
         <div>
           <h2 className="font-bold text-yellow-300 text-2xl">Портфолио</h2>
-          <p className="pt-6">Фотографии</p>
+          <p className="pt-6 text-lg">Фотографии</p>
         </div>
 
         {/* фотографии */}
         <div className="flex-1 pt-4">
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {data.map((item, index) => {
               return (
                 <li key={index} className="p-0 cursor-pointer">
@@ -77,7 +73,7 @@ export const Portfolio = () => {
                     onClick={() => getImg(item.imgSrc)}
                   >
                     <img
-                      className="w-full h-72 rounded-lg shadow-xl bg-cover bg-no-repeat object-cover"
+                      className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover"
                       src={item.imgSrc}
                       alt=""
                     />
@@ -85,9 +81,9 @@ export const Portfolio = () => {
                 </li>
               );
             })}
-            <div className=" bg-black  cursor-pointer transition-allease-in relative ">
+            <div className="bg-black  cursor-pointer transition-allease-in relative ">
               <img
-                className="w-full h-72 rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
+                className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
                 src={Img4}
                 alt=""
               />
@@ -97,16 +93,16 @@ export const Portfolio = () => {
         </div>
 
         {/* Видео */}
-        <p className="pt-6">Видео</p>
+        <p className="pt-6 text-lg">Видео</p>
         <div className="flex-1 pt-4">
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
             {urlVideo.map((item, index) => {
               return (
-                <li key={index} className="p-0 cursor-pointer ">
+                <li key={index} className="p-0 cursor-pointer">
                   <Button onClick={handleOpen}>
                     <div className="h-full transition-allease-in hover:opacity-80 relative ">
                       <img
-                        className="w-screen h-72 rounded-lg shadow-xl bg-cover bg-no-repeat object-cover"
+                        className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover"
                         src={item.imgSrc}
                         alt=""
                       />
@@ -137,6 +133,16 @@ export const Portfolio = () => {
                 </li>
               );
             })}
+            <div className="bg-black cursor-pointer transition-allease-in relative ">
+              <Button>
+                <img
+                  className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
+                  src={Img4}
+                  alt=""
+                />
+                <p className="text-pos">+30</p>
+              </Button>
+            </div>
           </ul>
         </div>
       </div>

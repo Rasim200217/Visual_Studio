@@ -11,7 +11,7 @@ export const StudioRental = () => {
           alt="studio"
         />
       </div>
-      <div className="px-12 pt-12 order-1 lg:order-2">
+      <div className="px-12 md:px-28 pt-12 order-1 lg:order-2">
         <h2 className="font-bold text-yellow-300 text-2xl">
           Аренда фотостудии
         </h2>
