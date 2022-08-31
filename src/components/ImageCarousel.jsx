@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 export const ImageCarousel = ({
   images = [],
   autoPlay = true,
-  autoPlayTime = 5000,
-  children,
+  autoPlayTime = 3000,
   ...props
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);

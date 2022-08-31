@@ -1,5 +1,9 @@
 import React from "react";
 
+import "../scss/OurTeam.scss";
+
+import { FaInstagram } from "react-icons/fa";
+
 import avatar_1 from "../assets/team/avatar_1.jpg";
 import avatar_2 from "../assets/team/avatar_2.jpg";
 import avatar_3 from "../assets/team/avatar_3.jpg";
@@ -10,27 +14,31 @@ const team = [
     avatar: avatar_1,
     name: "Сучков Елисей Сергеевич",
     desc: "Директор",
+    social: "https://instagram.com/elisey_suchkov?igshid=YmMyMTA2M2Y=",
   },
   {
     avatar: avatar_2,
     name: "Назаров Даврон Равшанович",
     desc: "Замдиректор",
+    social: "https://instagram.com/soda.ql?igshid=YmMyMTA2M2Y=",
   },
   {
     avatar: avatar_3,
     name: "Назаров Даврон Равшанович",
     desc: "Оператор, Видеомонтажер",
+    social: "https://instagram.com/jafar.film?igshid=YmMyMTA2M2Y=",
   },
   {
     avatar: avatar_4,
     name: "Хасан Хожи",
     desc: "Гафер (Светооператор) Администратор",
+    social: "https://instagram.com/hoji.hasan_?igshid=YmMyMTA2M2Y=",
   },
 ];
 
 export const OurTeam = () => {
   return (
-    <div className="h-full bg-black text-white px-12 py-20 myContainer">
+    <div className="h-full bg-black text-white px-12 py-20">
       <div>
         <h2 className="font-bold text-yellow-300 text-2xl">Наша команда</h2>
       </div>
@@ -38,15 +46,25 @@ export const OurTeam = () => {
         {team.map((item, index) => {
           return (
             <div
-              className="cursor-pointer btn-hover hover:text-yellow-300"
+              className="cursor-pointer btn-hover hover:text-yellow-300 relative"
               key={index}
             >
-              <img
-                src={item.avatar}
-                alt={item.name}
-                className="rounded-xl w-full bg-cover object-cover"
-              />
-              <h3 className="font-semibold text-lg ">{item.name}</h3>
+              <a href={item.social} target="_blank">
+                <div key={index} className="column">
+                  <div className="post">
+                    <div className="overlay">
+                      <FaInstagram size={50} className=" text-white" />
+                    </div>
+                    <img
+                      src={item.avatar}
+                      alt={item.name}
+                      className="rounded-xl w-full bg-cover object-cover btn-hover hover:opacity-60"
+                    />
+                  </div>
+                </div>
+              </a>
+
+              <h3 className="font-semibold text-lg pt-3">{item.name}</h3>
               <p className=" text-base ">{item.desc}</p>
             </div>
           );

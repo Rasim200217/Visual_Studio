@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --card_small: 26;
+  --card_medium: 33;
+  --card_large: 45;
+}
+
 @font-face {
   font-family: "GothamProRegular";
   src: url("./fonts/GothaProMed.otf");

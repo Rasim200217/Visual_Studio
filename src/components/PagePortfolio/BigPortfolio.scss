@@ -1,0 +1,35 @@
+.myContainer {
+  position: relative;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: minmax(20px, auto);
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  .post {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.post:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}

@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../scss/Portfolio.scss";
 import { AiOutlineClose } from "react-icons/ai";
+import { BsFillPlayFill } from "react-icons/bs";
+import { GiMagnifyingGlass } from "react-icons/gi";
 
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
@@ -13,6 +16,9 @@ import Img2 from "../assets/img/img2.jpg";
 import Img3 from "../assets/img/img3.jpg";
 import Img4 from "../assets/img/img4.jpg";
 
+import imgVideo1 from "../assets/videoImg_1.png";
+import imgVideo2 from "../assets/videoImg_2.png";
+
 const data = [
   { id: 1, imgSrc: Img1 },
   { id: 2, imgSrc: Img2 },
@@ -21,16 +27,14 @@ const data = [
 
 const urlVideo = [
   {
-    url: "https://player.vimeo.com/video/732100843?h=3bf74103b7&title=0",
-    imgSrc: Img1,
+    id: 1,
+    urlVideo: "https://player.vimeo.com/video/739973521?h=6de078d33a&title=0",
+    imgSrc: imgVideo1,
   },
   {
-    url: "https://player.vimeo.com/video/732100843?h=3bf74103b7&title=0",
-    imgSrc: Img2,
-  },
-  {
-    url: "https://player.vimeo.com/video/732100843?h=3bf74103b7&title=0",
-    imgSrc: Img3,
+    id: 2,
+    urlVideo: "https://player.vimeo.com/video/739444043?h=34f130324e&title=0",
+    imgSrc: imgVideo2,
   },
 ];
 
@@ -68,26 +72,30 @@ export const Portfolio = () => {
             {data.map((item, index) => {
               return (
                 <li key={index} className="p-0 cursor-pointer">
-                  <div
-                    className="h-full transition-allease-in hover:opacity-80 relative"
-                    onClick={() => getImg(item.imgSrc)}
-                  >
-                    <img
-                      className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover"
-                      src={item.imgSrc}
-                      alt=""
-                    />
+                  <div key={index} className="column">
+                    <div className="post" onClick={() => getImg(item.imgSrc)}>
+                      <div className="overlay">
+                        <GiMagnifyingGlass size={50} className=" text-white" />
+                      </div>
+                      <img
+                        className="rounded-xl cursor-pointer"
+                        src={item.imgSrc}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </li>
               );
             })}
             <div className="bg-black  cursor-pointer transition-allease-in relative ">
-              <img
-                className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
-                src={Img4}
-                alt=""
-              />
-              <p className="text-pos">+30</p>
+              <Link className=" active:text-yellow-300" to="/portfolio">
+                <img
+                  className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
+                  src={Img4}
+                  alt=""
+                />
+                <p className="text-pos">+30</p>
+              </Link>
             </div>
           </ul>
         </div>
@@ -99,49 +107,57 @@ export const Portfolio = () => {
             {urlVideo.map((item, index) => {
               return (
                 <li key={index} className="p-0 cursor-pointer">
-                  <Button onClick={handleOpen}>
-                    <div className="h-full transition-allease-in hover:opacity-80 relative ">
+                  <iframe
+                    src={item.urlVideo}
+                    className="w-full h-full rounded-lg"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  {/* <Button onClick={handleOpen}>
+                    <div className="h-full transition-allease-in hover:opacity-80 relative btn-hover">
                       <img
-                        className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover"
+                        className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover relative bg-black opacity-60"
                         src={item.imgSrc}
                         alt=""
                       />
+                      <BsFillPlayFill
+                        size={80}
+                        className="justify-center items-center mx-auto my-auto text-pos"
+                      />
                     </div>
-                  </Button>
-
-                  <Modal
+                  </Button> */}
+                  {/* <Modal
                     open={open}
                     onClose={handleClose}
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                   >
                     <Box className="modalVideo">
+                      <iframe
+                        src={item.urlVideo}
+                        className="w-full h-full"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
                       <AiOutlineClose
                         className="text-white absolute right-0 top-52 cursor-pointer lg:top-40 sm:top-56"
                         onClick={handleClose}
                         size={20}
                       />
-                      <iframe
-                        className="w-full h-full"
-                        src={item.url}
-                        frameborder="0"
-                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                        allowfullscreen
-                      ></iframe>
                     </Box>
-                  </Modal>
+                  </Modal> */}
                 </li>
               );
             })}
-            <div className="bg-black cursor-pointer transition-allease-in relative ">
-              <Button>
-                <img
-                  className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
-                  src={Img4}
-                  alt=""
-                />
-                <p className="text-pos">+30</p>
-              </Button>
+            <div className=" cursor-pointer transition-allease-in relative ">
+              <img
+                className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
+                src={imgVideo2}
+                alt=""
+              />
+              <p className="text-pos">+30</p>
             </div>
           </ul>
         </div>

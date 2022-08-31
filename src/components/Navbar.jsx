@@ -6,6 +6,7 @@ import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 
 import Logo from "../assets/VS 21.png";
 import RenderLink from "../assets/RENDER.png";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -21,7 +22,9 @@ export const Navbar = () => {
         </div>
         <ul className="hidden lg:flex px-5">
           <li>
-            <a>Главная</a>
+            <Link className=" active:text-yellow-300" to="/">
+              Главная
+            </Link>
           </li>
           <li>
             <a>Фотостудия</a>
@@ -30,12 +33,14 @@ export const Navbar = () => {
             <a>Ретушь</a>
           </li>
           <li>
-            <a>Портфолио</a>
+            <Link className=" active:text-yellow-300" to="/portfolio">
+              Портфолио
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to="/video">
               <img src={RenderLink} className="h-4 mt-1" />
-            </a>
+            </Link>
           </li>
           <li>
             <a>Команда</a>
@@ -80,7 +85,7 @@ export const Navbar = () => {
             <a>Ретушь</a>
           </li>
           <li>
-            <a>Портфолио</a>
+            <Link to="/portfolio">Портфолио</Link>
           </li>
           <li>
             <a>Render</a>
