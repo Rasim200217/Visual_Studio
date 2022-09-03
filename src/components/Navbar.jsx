@@ -30,7 +30,7 @@ export const Navbar = () => {
             <a>Фотостудия</a>
           </li>
           <li>
-            <a>Ретушь</a>
+            <Link to="/retouch">Ретушь</Link>
           </li>
           <li>
             <Link className=" active:text-yellow-300" to="/portfolio">
@@ -59,9 +59,9 @@ export const Navbar = () => {
       {/* Hamburger*/}
       <div onClick={handleNav} className="lg:hidden z-20">
         {nav ? (
-          <AiOutlineClose className="text-white" size={20} />
+          <AiOutlineClose className="text-white cursor-pointer" size={20} />
         ) : (
-          <HiOutlineMenuAlt4 size={20} />
+          <HiOutlineMenuAlt4 size={20} className=" cursor-pointer" />
         )}
       </div>
       {/* Mobile menu dropdowm*/}
@@ -82,13 +82,15 @@ export const Navbar = () => {
             <a>Фотостудия</a>
           </li>
           <li>
-            <a>Ретушь</a>
+            <Link to="/retouch">Ретушь</Link>
           </li>
           <li>
             <Link to="/portfolio">Портфолио</Link>
           </li>
           <li>
-            <a>Render</a>
+            <Link to="/video">
+              <img src={RenderLink} className="h-4 mt-1" />
+            </Link>
           </li>
           <li>
             <a>Команда</a>
@@ -98,9 +100,18 @@ export const Navbar = () => {
           </li>
           <div className="mx-5 mt-4 border-t pt-6 border-yellow-300 border-b pb-6">
             <div className="flex justify-between mx-6">
-              <FaFacebook className="icon" fontSize={30} />
-              <FaInstagram className="icon" fontSize={30} />
-              <FaTelegram className="icon" fontSize={30} />
+              <FaFacebook
+                className="icon cursor-pointer hover:text-yellow-300 btn-hover"
+                fontSize={30}
+              />
+              <FaInstagram
+                className="icon cursor-pointer hover:text-yellow-300 btn-hover"
+                fontSize={30}
+              />
+              <FaTelegram
+                className="icon cursor-pointer hover:text-yellow-300 btn-hover"
+                fontSize={30}
+              />
             </div>
           </div>
         </ul>

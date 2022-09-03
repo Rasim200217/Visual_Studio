@@ -19,6 +19,9 @@ import Img4 from "../assets/img/img4.jpg";
 import imgVideo1 from "../assets/videoImg_1.png";
 import imgVideo2 from "../assets/videoImg_2.png";
 
+import { Gallery } from "./PagePortfolio/dataGallery";
+import { GalleryVideo } from "./PageVideo/dataVideo";
+
 const data = [
   { id: 1, imgSrc: Img1 },
   { id: 2, imgSrc: Img2 },
@@ -94,7 +97,7 @@ export const Portfolio = () => {
                   src={Img4}
                   alt=""
                 />
-                <p className="text-pos">+30</p>
+                <p className="text-pos">+{Gallery.length}</p>
               </Link>
             </div>
           </ul>
@@ -152,12 +155,14 @@ export const Portfolio = () => {
               );
             })}
             <div className=" cursor-pointer transition-allease-in relative ">
-              <img
-                className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
-                src={imgVideo2}
-                alt=""
-              />
-              <p className="text-pos">+30</p>
+              <Link to="/video">
+                <img
+                  className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
+                  src={imgVideo2}
+                  alt=""
+                />
+                <p className="text-pos">+{GalleryVideo.length}</p>
+              </Link>
             </div>
           </ul>
         </div>

@@ -1,0 +1,22 @@
+.wText {
+  width: 600px;
+
+  @media screen and (max-width: 760px) {
+    width: 100%;
+  }
+}
+
+.example-div {
+  height: 50vh;
+}
+
+.player-div {
+  width: 100%;
+}
+
+.player-div iframe,
+.player-div object,
+.player-div embed {
+  max-width: 100%;
+  max-height: 100%;
+}
