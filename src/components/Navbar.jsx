@@ -76,7 +76,7 @@ export const Navbar = () => {
         <ul>
           <img src={Logo} className="h-10 my-2 ml-3" />
           <li>
-            <a>Главная</a>
+            <Link to="/">Главная</Link>
           </li>
           <li>
             <a>Фотостудия</a>

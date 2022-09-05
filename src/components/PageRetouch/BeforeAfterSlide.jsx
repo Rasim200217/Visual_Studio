@@ -15,10 +15,17 @@ import Masonry from "@mui/lab/Masonry/Masonry";
 export const BeforeAfterSlide = () => {
   const [imageRevealFraq, setImageRevealFraq] = useState(0.5);
   const imageContainer = useRef(undefined);
+  const [activeImage, setactiveImage] = useState({
+    beforeImg: "",
+    afterImg: "",
+  });
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [isOpenned, setIsOpenned] = React.useState(false);
+  const handleOpen = (props) => {
+    setIsOpenned(true);
+    setactiveImage(props);
+  };
+  const handleClose = () => setIsOpenned(false);
 
   const slide = (xPosition) => {
     const containerBoundingRect =
@@ -63,77 +70,85 @@ export const BeforeAfterSlide = () => {
   };
 
   return (
-    <div className="px-4">
+    <div className="px-4 pt-20">
       <Masonry columns={{ xs: 1, sm: 2, md: 4 }} spacing={2}>
-        {GalleryRetouch.map((item, index) => (
-          <div key={index}>
-            <Item sx={{ item }} className="cursor-pointer">
-              <div className="column">
-                <div className="post" onClick={handleOpen}>
-                  <div className="overlay">
-                    <GiMagnifyingGlass size={50} className=" text-white" />
+        {GalleryRetouch.map((item) => {
+          const { beforeImg, afterImg } = item;
+
+          return (
+            <div key={item.id}>
+              <Item sx={{ item }} className="cursor-pointer">
+                <div className="column">
+                  <div
+                    className="post"
+                    onClick={() => handleOpen({ beforeImg, afterImg })}
+                  >
+                    <div className="overlay">
+                      <GiMagnifyingGlass size={50} className=" text-white" />
+                    </div>
+                    <img
+                      className="rounded-xl cursor-pointer"
+                      src={item.afterImg}
+                      alt=""
+                    />
                   </div>
-                  <img
-                    className="rounded-xl cursor-pointer"
-                    src={item.afterImg}
-                    alt=""
+                </div>
+              </Item>
+            </div>
+          );
+        })}
+      </Masonry>
+
+      <Modal
+        open={isOpenned}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box className="before-after">
+          <div
+            ref={imageContainer}
+            className="max-w-2xl w-full mx-auto relative select-none group "
+          >
+            <img
+              src={activeImage.beforeImg}
+              alt=""
+              className="pointer-events-none "
+            />
+            <img
+              style={{
+                clipPath: `polygon(0 0, ${imageRevealFraq * 100}% 0, ${
+                  imageRevealFraq * 100
+                }% 100%, 0 100%)`,
+              }}
+              src={activeImage.afterImg}
+              alt=""
+              className=" absolute inset-0 pointer-events-none "
+            />
+            <div
+              style={{ left: `${imageRevealFraq * 100}%` }}
+              className=" absolute inset-y-0 group-hover:opacity-100 md:opacity-0"
+            >
+              <div className=" relative h-full opacity-50 hover:opacity-100">
+                <div className=" absolute inset-y-0 bg-white w-0.5 -ml-px"></div>
+                <div
+                  style={{ touchAction: "none" }}
+                  onMouseDown={handleMouseDown}
+                  onTouchMove={handleTouchMove}
+                  className="h-12 w-12 -ml-6 -mt-6 rounded-full
+                         bg-white absolute top-1/2 shadow-xl flex items-center
+                          justify-center cursor-pointer"
+                >
+                  <TiArrowUnsorted
+                    size={20}
+                    className=" text-gray-300 rotate-90 transform"
                   />
                 </div>
               </div>
-            </Item>
-            <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
-            >
-              <Box className="before-after">
-                <div
-                  ref={imageContainer}
-                  className="max-w-xl w-full mx-auto relative select-none group "
-                >
-                  <img
-                    src={item.beforeImg}
-                    alt=""
-                    className="pointer-events-none "
-                  />
-                  <img
-                    style={{
-                      clipPath: `polygon(0 0, ${imageRevealFraq * 100}% 0, ${
-                        imageRevealFraq * 100
-                      }% 100%, 0 100%)`,
-                    }}
-                    src={item.afterImg}
-                    alt=""
-                    className=" absolute inset-0 pointer-events-none "
-                  />
-                  <div
-                    style={{ left: `${imageRevealFraq * 100}%` }}
-                    className=" absolute inset-y-0 group-hover:opacity-100 md:opacity-0"
-                  >
-                    <div className=" relative h-full opacity-50 hover:opacity-100">
-                      <div className=" absolute inset-y-0 bg-white w-0.5 -ml-px"></div>
-                      <div
-                        style={{ touchAction: "none" }}
-                        onMouseDown={handleMouseDown}
-                        onTouchMove={handleTouchMove}
-                        className="h-12 w-12 -ml-6 -mt-6 rounded-full
-                         bg-white absolute top-1/2 shadow-xl flex items-center
-                          justify-center cursor-pointer"
-                      >
-                        <TiArrowUnsorted
-                          size={20}
-                          className=" text-gray-300 rotate-90 transform"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Box>
-            </Modal>
+            </div>
           </div>
-        ))}
-      </Masonry>
+        </Box>
+      </Modal>
     </div>
   );
 };
