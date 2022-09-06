@@ -42,7 +42,7 @@ export const OurTeam = () => {
       <div>
         <h2 className="font-bold text-yellow-300 text-2xl">Наша команда</h2>
       </div>
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-2 lg:grid-cols-4 lg:gap-8 text-center pt-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-12 text-center pt-6">
         {team.map((item, index) => {
           return (
             <div

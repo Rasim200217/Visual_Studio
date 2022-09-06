@@ -20,17 +20,19 @@ export const StudioRental = () => {
           пространство, разделённое фактурными зонами в стиле Loft для
           реализации любых идей и задумок.
         </p>
-        <div className="grid grid-cols-2 text-white pt-6">
+        <div className="grid grid-cols-2 gap-4 text-white pt-6">
           <div>
-            <p>Аренда за студийный час</p>
+            <p className=" text-xs lg:text-sm">Аренда за студийный час</p>
             <p>
-              <span className=" font-bold text-2xl">150 000</span> сум
+              <span className=" font-bold text-xl lg:text-2xl">150 000</span>{" "}
+              сум
             </p>
           </div>
           <div>
-            <p>Дополнительный свет</p>
+            <p className="text-xs lg:text-sm">Дополнительный свет</p>
             <p>
-              <span className=" font-bold text-2xl">+45 000</span> сум
+              <span className=" font-bold text-xl lg:text-2xl">+45 000</span>{" "}
+              сум
             </p>
           </div>
         </div>
