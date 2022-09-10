@@ -22,17 +22,17 @@ export const StudioRental = () => {
         </p>
         <div className="grid grid-cols-2 gap-4 text-white pt-6">
           <div>
-            <p className=" text-xs lg:text-sm">Аренда за студийный час</p>
+            <p className="text-xs lg:text-sm">Аренда за студийный час</p>
             <p>
-              <span className=" font-bold text-xl lg:text-2xl">150 000</span>{" "}
-              сум
+              <span className="font-bold text-xl lg:text-2xl">200 000</span> сум
             </p>
           </div>
           <div>
-            <p className="text-xs lg:text-sm">Дополнительный свет</p>
+            <p className="text-xs lg:text-sm  w-2 sm:w-full">
+              Дополнительный свет
+            </p>
             <p>
-              <span className=" font-bold text-xl lg:text-2xl">+45 000</span>{" "}
-              сум
+              <span className="font-bold text-xl lg:text-2xl">+45 000</span> сум
             </p>
           </div>
         </div>

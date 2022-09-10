@@ -5,7 +5,10 @@ import { VscMail, VscLocation } from "react-icons/vsc";
 
 export const Footer = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-4 px-12 bg-black pt-12 pb-12">
+    <div
+      id="location"
+      className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-4 px-12 bg-black pt-12 pb-12"
+    >
       <div>
         <h2 className="font-bold text-yellow-300 text-2xl md:text-xl">
           The Visual Studio 21

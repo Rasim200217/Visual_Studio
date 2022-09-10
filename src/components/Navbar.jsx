@@ -18,7 +18,9 @@ export const Navbar = () => {
     <div className="flex justify-between items-center h-20 bg-black text-white px-12">
       <div className="flex">
         <div>
-          <img src={Logo} className="h-10 my-2" />
+          <Link to="/">
+            <img src={Logo} className="h-10 my-2" />
+          </Link>
         </div>
         <ul className="hidden lg:flex px-5">
           <li>
@@ -27,7 +29,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a>Фотостудия</a>
+            <a href="#fotostudio">Фотостудия</a>
           </li>
           <li>
             <Link to="/retouch">Ретушь</Link>
@@ -43,10 +45,10 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a>Команда</a>
+            <a href="#team">Команда</a>
           </li>
           <li>
-            <a>Где мы?</a>
+            <a href="#location">Где мы?</a>
           </li>
         </ul>
       </div>
@@ -69,17 +71,17 @@ export const Navbar = () => {
         onClick={handleNav}
         className={
           nav
-            ? "lg:hidden absolute left-0 top-0 w-full bg-black px-4 py-7 flex flex-col text-white z-10"
+            ? "lg:hidden absolute left-0 top-0 w-full bg-black px-9 py-5 flex flex-col text-white z-10"
             : "absolute left-[-100%]"
         }
       >
-        <ul>
-          <img src={Logo} className="h-10 my-2 ml-3" />
+        <ul className="">
+          <img src={Logo} className="h-10 ml-3" />
           <li>
             <Link to="/">Главная</Link>
           </li>
           <li>
-            <a>Фотостудия</a>
+            <a href="#fotostudio">Фотостудия</a>
           </li>
           <li>
             <Link to="/retouch">Ретушь</Link>
@@ -93,12 +95,12 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a>Команда</a>
+            <a href="#team">Команда</a>
           </li>
           <li>
-            <a>Где мы?</a>
+            <a href="#location">Где мы?</a>
           </li>
-          <div className="mx-5 mt-4 border-t pt-6 border-yellow-300 border-b pb-6">
+          <div className="mx-4 mt-4 border-t pt-6 border-yellow-300 border-b pb-6">
             <div className="flex justify-between mx-6">
               <FaFacebook
                 className="icon cursor-pointer hover:text-yellow-300 btn-hover"

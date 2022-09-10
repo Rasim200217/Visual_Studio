@@ -154,10 +154,10 @@ export const Portfolio = () => {
                 </li>
               );
             })}
-            <div className=" cursor-pointer transition-allease-in relative ">
+            <div className="cursor-pointer transition-allease-in relative">
               <Link to="/video">
                 <img
-                  className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
+                  className=" mx-auto w-72 sm:w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover opacity-60"
                   src={imgVideo2}
                   alt=""
                 />

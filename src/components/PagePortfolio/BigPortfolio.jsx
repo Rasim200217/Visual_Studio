@@ -48,7 +48,7 @@ export const BigPortfolio = () => {
       </div>
       <div className=" px-12 pt-20">
         <h2 className="font-bold text-yellow-300 text-2xl">Фотографии</h2>
-        <div className=" text-white flex justify-between w-80 md:w-96 pt-6 text-xs md:text-sm">
+        <div className=" text-white flex justify-between w-76 md:w-96 pt-6 text-xs md:text-sm">
           <button
             onClick={() => setItems(Gallery)}
             className=" hover:opacity-80 btn-hover"

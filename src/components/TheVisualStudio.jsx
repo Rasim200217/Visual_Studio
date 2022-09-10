@@ -31,8 +31,8 @@ export const TheVisualStudio = () => {
           </p>
 
           <button
-            className="font-bold text-white px-10 py-5 border
-           border-yellow-300 rounded-full text-base mt-10 btn-hover 
+            className="font-bold text-white px-6 py-4 sm:px-10 sm:py-5 border
+           border-yellow-300 rounded-full text-sm sm:text-base mt-10 btn-hover 
            hover:bg-yellow-300 hover:text-black focus:bg-yellow-300
             focus:text-black"
           >

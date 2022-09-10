@@ -19,7 +19,7 @@ const team = [
   {
     avatar: avatar_2,
     name: "Назаров Даврон Равшанович",
-    desc: "Замдиректор",
+    desc: "Замдиректора",
     social: "https://instagram.com/soda.ql?igshid=YmMyMTA2M2Y=",
   },
   {
@@ -38,7 +38,7 @@ const team = [
 
 export const OurTeam = () => {
   return (
-    <div className="h-full bg-black text-white px-12 py-20">
+    <div id="team" className="h-full bg-black text-white px-12 py-20">
       <div>
         <h2 className="font-bold text-yellow-300 text-2xl">Наша команда</h2>
       </div>

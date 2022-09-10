@@ -20,17 +20,17 @@ export const Retouch = () => {
       >
         <div>
           <div>
-            <h2 className=" text-yellow-300 font-bold text-6xl">
+            <h2 className=" text-yellow-300 font-bold text-3xl sm:text-6xl">
               Услуги по ретуши фото
             </h2>
-            <p className="text-white mt-8 text-sm leading-6 wText">
+            <p className="text-white mt-4 sm:mt-8 text-sm leading-6 wText">
               Мы предоставляем 5 пакетов ретуши фото на выбор. Они все
               перечислены ниже. Есть также специальные предложения для
               начинающих фотографов и пресеты для Lightroom, чтобы облегчить
               обработку снимков.
             </p>
             <div className="mt-10 grid grid-cols-2 md:flex">
-              <button className="font-bold text-white px-6 py-3 md:px-12 md:py-5 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
+              <button className="font-bold text-white px-6 py-4 md:px-12 md:py-5 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
                 <a href="#services">Пакет услуг</a>
               </button>
             </div>

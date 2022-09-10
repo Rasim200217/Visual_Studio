@@ -1,0 +1,44 @@
+.form {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    width: 320px;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    color: #000;
+
+    &:hover {
+      border-color: yellow;
+    }
+    &:focus {
+      border-color: yellow;
+    }
+  }
+
+  .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    color: white;
+    margin-left: 12px;
+    margin-top: 12px;
+  }
+  .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+    color: white;
+  }
+  label {
+    color: white;
+  }
+
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-color: yellow !important;
+  }
+  .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+    color: white !important;
+  }
+  .MuiSvgIcon-root {
+    color: #fff;
+  }
+}

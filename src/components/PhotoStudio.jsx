@@ -21,7 +21,10 @@ export const PhotoStudio = () => {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full secondaryColor text-white px-12 pt-20">
+      <div
+        id="fotostudio"
+        className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full secondaryColor text-white px-12 pt-20"
+      >
         <div>
           <h2 className="font-bold text-yellow-300 text-2xl">Фотостудия</h2>
           <p className="pt-6 relative leading-6">
@@ -38,8 +41,8 @@ export const PhotoStudio = () => {
           <div className="mt-8">
             <Button onClick={handleOpen}>
               <button
-                className="font-bold text-white px-10 py-5 border
-           border-yellow-300 rounded-full text-base  btn-hover 
+                className="font-bold text-white px-6 py-4 sm:px-10 sm:py-5 border
+           border-yellow-300 rounded-full text-sm sm:text-base  btn-hover 
            hover:bg-yellow-300 hover:text-black focus:bg-yellow-300
             focus:text-black"
               >
