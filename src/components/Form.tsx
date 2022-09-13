@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+import useLocalStorage from "use-local-storage";
 
 import dayjs, { Dayjs } from "dayjs";
-import TextField from "@mui/material/TextField";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
 
 import { useForm } from "react-hook-form";
 
@@ -12,6 +12,7 @@ import axios from "axios";
 
 import "../scss/Form.scss";
 import "dayjs/locale/ru";
+import { BsCheck2Circle } from "react-icons/bs";
 
 dayjs.locale("ru");
 
@@ -20,19 +21,32 @@ const CHAT_ID = "-1001785372965";
 const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 export const Form = () => {
-  const [value, setValue] = useState();
+  const [isSended, setIsSended] = useState(false);
+  const [store, setStore] = useLocalStorage<number | string>("sendLimit", "");
+
+  const handleClose = () => setIsSended(false);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
-    console.log(data);
-    let message = `<b>Заявка с сайта!</b>\n`;
-    message += `<b>Отправитель: </b> ${data.Name}\n`;
-    message += `<b>Телефон: </b> ${data.MobileNumber}\n`;
-    message += `<b>Дата бронирования: </b> ${data}`;
+    const selfDate = dayjs(new Date());
+    const limitDate = dayjs(store);
+
+    if (store) {
+      if (selfDate.format() < limitDate.format()) {
+        alert("Незя");
+        return;
+      }
+    }
+
+    let message = `&#128233 <b>Заявка с сайта!</b>\n`;
+    message += `&#128590 Отправитель: <b>${data.Name}</b>\n`;
+    message += `&#128222 Телефон: <b>${data.MobileNumber}</b>\n`;
+    message += `&#9203 Дата бронирования:  <b>${data.date}, ${data.Time}</b>`;
 
     axios
       .post(URL_API, {
@@ -40,16 +54,21 @@ export const Form = () => {
         parse_mode: "html",
         text: message,
       })
-      .then((res) => {
-        data.Name = "";
-        data.MobileNumber = "";
-      })
+      .then((res) => {})
       .catch((errors) => {
         console.log(errors);
       })
       .finally(() => {
-        console.log("end");
+        setIsSended(true);
       });
+
+    setStore(selfDate.add(10, "second").unix("YYYY-MM-DD hh:mm:ss"));
+    console.log(
+      setStore(selfDate.add(10, "second").unix("YYYY-MM-DD hh:mm:ss"))
+    );
+    console.log(selfDate);
+
+    alert("Yes");
   };
 
   return (
@@ -68,10 +87,20 @@ export const Form = () => {
           {...register("MobileNumber", {
             required: true,
             minLength: 6,
-            maxLength: 12,
+            maxLength: 15,
           })}
         />
-
+        <input
+          type="date"
+          placeholder="date"
+          {...register("date", {})}
+          min={new Date().toISOString().split("T")[0]}
+        />
+        <input
+          type="time"
+          placeholder="Укажите время"
+          {...register("Time", { required: true })}
+        />
         {/* <LocalizationProvider
           dateAdapter={AdapterDayjs}
           className=" text-white sm:text-white"
@@ -94,6 +123,22 @@ export const Form = () => {
           Отправить
         </button>
       </form>
+
+      <Modal
+        open={isSended}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box className="formModal">
+          <div className="flex">
+            <BsCheck2Circle size={30} className="text-center text-green-400" />
+            <h2 className="font-medium sm:text-2xl text-white text-xl ml-3">
+              Заявка отправлена успешно!
+            </h2>
+          </div>
+        </Box>
+      </Modal>
     </div>
   );
 };

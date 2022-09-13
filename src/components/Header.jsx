@@ -22,7 +22,7 @@ import "../scss/Header.scss";
 import image1 from "../assets/slide_1.jpg";
 import image2 from "../assets/slide_2.jpg";
 import image3 from "../assets/slide_3.jpg";
-import { Form } from "./Form";
+import { Form } from "./Form.tsx";
 
 export const Header = () => {
   const [open, setOpen] = React.useState(false);
