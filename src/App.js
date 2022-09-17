@@ -8,9 +8,10 @@ import { PortfolioVideo } from "./components/PageVideo/PortfolioVideo";
 function App() {
   return (
     <>
-      <Navbar className="" />
+      <Navbar />
+
       <Routes>
-        <Route path="/" element={<Header />} />
+        <Route exact path="/" element={<Header />} />
         <Route path="/portfolio" element={<BigPortfolio />} />
         <Route path="/video" element={<PortfolioVideo />} />
         <Route path="/retouch" element={<Retouch />} />

@@ -1,7 +1,16 @@
 import React from "react";
 import studioImg from "../assets/studio.png";
 
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import { Form } from "./Form";
+
 export const StudioRental = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className="secondaryColor grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div className="order-2 lg:order-1">
@@ -36,14 +45,29 @@ export const StudioRental = () => {
             </p>
           </div>
         </div>
-        <button
-          className="font-bold text-white px-10 py-5 border
-           border-yellow-300 rounded-full text-base mt-8 btn-hover 
+        <div className="mt-8">
+          <Button onClick={handleOpen}>
+            <button
+              className="font-bold text-white px-10 py-5 border
+           border-yellow-300 rounded-full text-base btn-hover 
            hover:bg-yellow-300 hover:text-black focus:bg-yellow-300
             focus:text-black"
+            >
+              Забронировать
+            </button>
+          </Button>
+        </div>
+
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
         >
-          Забронировать
-        </button>
+          <Box className="formModal">
+            <Form handleCloseF={handleClose} />
+          </Box>
+        </Modal>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 
 import Logo from "../assets/VS 21.png";
 import RenderLink from "../assets/RENDER.png";
+import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -29,7 +30,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="#fotostudio">Фотостудия</a>
+            <HashLink to="/#fotostudio">Фотостудия</HashLink>
           </li>
           <li>
             <Link to="/retouch">Ретушь</Link>
@@ -45,7 +46,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="#team">Команда</a>
+            <HashLink to="/#team">Команда</HashLink>
           </li>
           <li>
             <a href="#location">Где мы?</a>
@@ -53,9 +54,11 @@ export const Navbar = () => {
         </ul>
       </div>
 
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex hover:text-yellow-300 btn-hover">
         <FiPhone size={18} className="my-0.5" />
-        <a className="px-2">+998 (93) 509-42-55</a>
+        <a className="px-2" href="tel:+998935094255">
+          +998 (93) 509-42-55
+        </a>
       </div>
 
       {/* Hamburger*/}
@@ -81,7 +84,7 @@ export const Navbar = () => {
             <Link to="/">Главная</Link>
           </li>
           <li>
-            <a href="#fotostudio">Фотостудия</a>
+            <HashLink to="/#fotostudio">Фотостудия</HashLink>
           </li>
           <li>
             <Link to="/retouch">Ретушь</Link>
@@ -95,10 +98,16 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="#team">Команда</a>
+            <HashLink to="/#team">Команда</HashLink>
           </li>
           <li>
             <a href="#location">Где мы?</a>
+          </li>
+          <li className="flex">
+            <FiPhone size={18} className="my-0.5" />
+            <a className="px-2" href="tel:+998935094255">
+              +998 (93) 509-42-55
+            </a>
           </li>
           <div className="mx-4 mt-4 border-t pt-6 border-yellow-300 border-b pb-6">
             <div className="flex justify-between mx-6">

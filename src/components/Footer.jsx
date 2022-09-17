@@ -19,14 +19,19 @@ export const Footer = () => {
               className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
               fontSize={30}
             />
-            <FaInstagram
-              className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
-              fontSize={30}
-            />
-            <FaTelegram
-              className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
-              fontSize={30}
-            />
+            <a href="https://www.instagram.com/vs21.art/" target="_blank">
+              <FaInstagram
+                className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
+                fontSize={30}
+              />
+            </a>
+
+            <a href="https://t.me/vs21art" target="_blank">
+              <FaTelegram
+                className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
+                fontSize={30}
+              />
+            </a>
           </div>
           <p className="text-white">
             Copyright © 2019 - 2022 zxdk All Right Reserved.
@@ -35,14 +40,19 @@ export const Footer = () => {
       </div>
 
       <div className=" text-white pt-8 md:pt-0 order-1 md:order-2">
-        <div className="flex cursor-pointer">
-          <BsTelephone size={20} />
-          <p className=" text-base pl-2">+998 (90) 348-71-81</p>
-        </div>
-        <div className="flex pt-4 cursor-pointer">
-          <VscMail size={25} />
-          <p className=" text-base pl-2">vusialstudio21@gmail.com</p>
-        </div>
+        <a href="tel:+998935094255">
+          <div className="flex cursor-pointer">
+            <BsTelephone size={20} />
+            <p className=" text-base pl-2">+998 (90) 348-71-81</p>
+          </div>
+        </a>
+        <a href="">
+          <div className="flex pt-4 cursor-pointer">
+            <VscMail size={25} />
+            <p className=" text-base pl-2">vusialstudio21@gmail.com</p>
+          </div>
+        </a>
+
         <div className="flex pt-4 cursor-pointer">
           <VscLocation size={25} />
           <p className=" text-base pl-2 w-80">

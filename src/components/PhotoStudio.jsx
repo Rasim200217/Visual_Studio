@@ -21,12 +21,11 @@ export const PhotoStudio = () => {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <div
-        id="fotostudio"
-        className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full secondaryColor text-white px-12 pt-20"
-      >
+      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full secondaryColor text-white px-12 pt-20">
         <div>
-          <h2 className="font-bold text-yellow-300 text-2xl">Фотостудия</h2>
+          <a id="fotostudio" className="font-bold text-yellow-300 text-2xl">
+            Фотостудия
+          </a>
           <p className="pt-6 relative leading-6">
             Наша студия универсальна и подойдёт
             <br /> под любые виды съёмок:

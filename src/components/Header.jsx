@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import { Footer } from "../components/Footer";
 import { Intro } from "../components/Intro";
@@ -22,7 +22,7 @@ import "../scss/Header.scss";
 import image1 from "../assets/slide_1.jpg";
 import image2 from "../assets/slide_2.jpg";
 import image3 from "../assets/slide_3.jpg";
-import { Form } from "./Form.tsx";
+import { Form } from "./Form.jsx";
 
 export const Header = () => {
   const [open, setOpen] = React.useState(false);
@@ -53,7 +53,7 @@ export const Header = () => {
           </div>
           <div className="mt-10 flex">
             <Button onClick={handleOpen}>
-              <button className="font-bold text-white px-6 py-4 md:px-12 md:py-6 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
+              <button className="font-bold text-white px-12 py-6 md:px-12 md:py-6 border border-yellow-300 rounded-full text-base md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
                 Забронировать
               </button>
             </Button>
@@ -65,16 +65,16 @@ export const Header = () => {
               aria-describedby="modal-modal-description"
             >
               <Box className="formModal">
-                <Form />
+                <Form handleCloseF={handleClose} />
               </Box>
             </Modal>
 
-            <button className="ml-4 sm:ml-8 font-bold text-white p-4 md:p-6 border border-white rounded-full text-base btn-hover hover:bg-white hover:text-black">
+            {/* <button className="ml-4 sm:ml-8 font-bold text-white p-4 md:p-6 border border-white rounded-full text-base btn-hover hover:bg-white hover:text-black">
               <BsFillPlayFill size={30} />
             </button>
             <p className="text-white m-auto ml-4 cursor-pointer text-xs md:text-sm">
               Презентация студии
-            </p>
+            </p> */}
           </div>
         </div>
         <div>
@@ -84,14 +84,18 @@ export const Header = () => {
               className="icon mb-8 btn-hover hover:text-yellow-300 cursor-pointer"
               fontSize={25}
             />
-            <FaInstagram
-              className="icon mb-8 btn-hover hover:text-yellow-300 cursor-pointer"
-              fontSize={25}
-            />
-            <FaTelegram
-              className="icon btn-hover hover:text-yellow-300 cursor-pointer"
-              fontSize={25}
-            />
+            <a href="https://www.instagram.com/vs21.art/" target="_blank">
+              <FaInstagram
+                className="icon mb-8 btn-hover hover:text-yellow-300 cursor-pointer"
+                fontSize={25}
+              />
+            </a>
+            <a href="https://t.me/vs21art" target="_blank">
+              <FaTelegram
+                className="icon btn-hover hover:text-yellow-300 cursor-pointer"
+                fontSize={25}
+              />
+            </a>
           </div>
           <div className="lg:bg-white h-16 m-sm ml-3 mt-10"></div>
         </div>
@@ -99,7 +103,7 @@ export const Header = () => {
       <PhotoStudio />
       <Portfolio />
       <TheVisualStudio />
-      <Intro />
+      {/* <Intro /> */}
       <StudioRental />
       <OurTeam />
       <Footer />

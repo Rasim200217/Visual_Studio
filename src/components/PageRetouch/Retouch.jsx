@@ -30,9 +30,11 @@ export const Retouch = () => {
               обработку снимков.
             </p>
             <div className="mt-10 grid grid-cols-2 md:flex">
-              <button className="font-bold text-white px-6 py-4 md:px-12 md:py-5 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
-                <a href="#services">Пакет услуг</a>
-              </button>
+              <a href="#services">
+                <button className="font-bold text-white px-6 py-4 md:px-12 md:py-5 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
+                  Пакет услуг
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -261,14 +263,22 @@ export const Retouch = () => {
                 size={30}
                 className="btn-hover hover:text-yellow-300 cursor-pointer"
               />
-              <FaInstagram
-                size={30}
-                className="btn-hover hover:text-yellow-300 cursor-pointer"
-              />
-              <FaTelegram
-                size={30}
-                className="btn-hover hover:text-yellow-300 cursor-pointer"
-              />
+              <a
+                href="https://instagram.com/cassin.ph?igshid=YmMyMTA2M2Y="
+                target="_blank"
+              >
+                <FaInstagram
+                  size={30}
+                  className="btn-hover hover:text-yellow-300 cursor-pointer"
+                />
+              </a>
+
+              <a href="https://t.me/hoji_hasan" target="_blank">
+                <FaTelegram
+                  size={30}
+                  className="btn-hover hover:text-yellow-300 cursor-pointer"
+                />
+              </a>
             </div>
           </div>
           <div className=" pt-6 sm:pt-0 ">

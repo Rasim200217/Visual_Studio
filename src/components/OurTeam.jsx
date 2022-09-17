@@ -32,7 +32,7 @@ const team = [
     avatar: avatar_4,
     name: "Хасан Хожи",
     desc: "Гафер (Светооператор) Администратор",
-    social: "https://instagram.com/hoji.hasan_?igshid=YmMyMTA2M2Y=",
+    social: "https://instagram.com/cassin.ph?igshid=YmMyMTA2M2Y=",
   },
 ];
 
