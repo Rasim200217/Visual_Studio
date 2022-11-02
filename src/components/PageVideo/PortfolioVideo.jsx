@@ -1,6 +1,7 @@
 import React from "react";
 
 import { BsVimeo } from "react-icons/bs";
+import { FiPhone } from "react-icons/fi";
 
 import "./PortfolioVideo.scss";
 
@@ -25,9 +26,16 @@ export const PortfolioVideo = () => {
               идею, распишем сценарий и приступим к реализации крутого видео
               специально для Вас!
             </p>
+
+            <p className="text-white mt-4 text-sm leading-6 flex ">
+              <FiPhone size={18} className="my-0.5" />
+              <span className=" font-medium pl-2">
+                <a href="tel:+998903333366"> +998 (90) 333-33-66</a>
+              </span>
+            </p>
             <div className="mt-10 grid grid-cols-1 gap-4 sm:gap-3 sm:grid-cols-2 md:flex">
               <a href="https://forms.gle/v4p9FqJHaAAoo6Re7" target="_blank">
-                <button className="font-bold text-white px-6 py-3 md:px-12 md:py-5 border border-red-600 rounded-full text-xs md:text-base btn-hover hover:bg-red-600 hover:text-white">
+                <button className="font-bold text-white px-8 py-4 md:px-12 md:py-5 border border-red-600 rounded-full text-base md:text-base btn-hover hover:bg-red-600 hover:text-white">
                   Заполнить бриф
                 </button>
               </a>

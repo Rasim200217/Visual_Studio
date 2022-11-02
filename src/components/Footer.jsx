@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
-import { VscMail, VscLocation } from "react-icons/vsc";
+import { VscLocation, VscMail } from "react-icons/vsc";
 
 export const Footer = () => {
   return (
@@ -15,10 +15,13 @@ export const Footer = () => {
         </h2>
         <div className="order-2 md:order-1">
           <div className="flex justify-between w-40 pt-8 ">
-            <FaFacebook
-              className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
-              fontSize={30}
-            />
+            <a href="https://www.facebook.com/visualstudio21/" target="_blank">
+              <FaFacebook
+                className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
+                fontSize={30}
+              />
+            </a>
+
             <a href="https://www.instagram.com/vs21.art/" target="_blank">
               <FaInstagram
                 className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
@@ -40,10 +43,10 @@ export const Footer = () => {
       </div>
 
       <div className=" text-white pt-8 md:pt-0 order-1 md:order-2">
-        <a href="tel:+998935094255">
+        <a href="tel:+998903333366">
           <div className="flex cursor-pointer">
             <BsTelephone size={20} />
-            <p className=" text-base pl-2">+998 (90) 348-71-81</p>
+            <p className=" text-base pl-2"> +998 (90) 333-33-66</p>
           </div>
         </a>
         <a href="">

@@ -29,7 +29,9 @@
   transition: 0.5s;
 }
 
-.post:hover .overlay {
-  opacity: 1;
-  cursor: pointer;
+@media screen and (min-width: 1024px) {
+  .post:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
 }

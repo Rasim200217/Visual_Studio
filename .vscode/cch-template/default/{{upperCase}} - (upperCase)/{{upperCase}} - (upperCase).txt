@@ -1,0 +1,1 @@
+{{normal}} transform to {{upperCase}} (upperCase)

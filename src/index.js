@@ -3,12 +3,21 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.scss";
 import App from "./App";
+
+import { HelmetProvider } from "react-helmet-async";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <HelmetProvider>
+        <meta charSet="utf-8" />
+        <meta
+          name="og:description"
+          content="The Visual Studio – это творческая команда профессионалов, которая имеет огромный багаж опыта и знаний в таких сферах как фото-кино съемка, саунд-дизай и пр."
+        />
+      </HelmetProvider>
       <App />
     </BrowserRouter>
   </React.StrictMode>

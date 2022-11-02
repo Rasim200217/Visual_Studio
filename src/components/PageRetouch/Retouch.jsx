@@ -21,7 +21,7 @@ export const Retouch = () => {
         <div>
           <div>
             <h2 className=" text-yellow-300 font-bold text-3xl sm:text-6xl">
-              Услуги по ретуши фото
+              Услуга по ретуши фото
             </h2>
             <p className="text-white mt-4 sm:mt-8 text-sm leading-6 wText">
               Мы предоставляем 5 пакетов ретуши фото на выбор. Они все
@@ -29,12 +29,13 @@ export const Retouch = () => {
               начинающих фотографов и пресеты для Lightroom, чтобы облегчить
               обработку снимков.
             </p>
-            <div className="mt-10 grid grid-cols-2 md:flex">
+            <div className="mt-10">
               <a href="#services">
                 <button className="font-bold text-white px-6 py-4 md:px-12 md:py-5 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
                   Пакет услуг
                 </button>
               </a>
+              т
             </div>
           </div>
         </div>
@@ -104,7 +105,12 @@ export const Retouch = () => {
               <p className=" text-sm pl-2 text-white">Ретушь фото младенцев</p>
             </div>
 
-            <p className="font-bold text-yellow-300 text-2xl pt-36">Цена: 3$</p>
+            <p className="font-bold text-yellow-300 text-2xl pt-36">
+              Цена: 3${" "}
+              <span className=" text-[16px] text-gray-400 font-normal">
+                за 1 фото
+              </span>
+            </p>
           </div>
 
           {/* {"2"} */}
@@ -180,7 +186,12 @@ export const Retouch = () => {
               <BsPlusLg size={18} className="text-red-600 rotate-45" />
               <p className=" text-sm pl-2 text-white">Masking Images</p>
             </div>
-            <p className="font-bold text-yellow-300 text-2xl pt-8">Цена: 6$</p>
+            <p className="font-bold text-yellow-300 text-2xl pt-8">
+              Цена: 6${" "}
+              <span className=" text-[16px] text-gray-400 font-normal">
+                за 1 фото
+              </span>
+            </p>
           </div>
 
           {/* {"3"} */}
@@ -240,7 +251,10 @@ export const Retouch = () => {
               <p className=" text-sm pl-2 text-white">Ретушь фото в стиле ню</p>
             </div>
             <p className="font-bold text-yellow-300 text-2xl pt-52">
-              Цена: 12$
+              Цена: 12${" "}
+              <span className=" text-[16px] text-gray-400 font-normal">
+                за 1 фото
+              </span>
             </p>
           </div>
         </div>

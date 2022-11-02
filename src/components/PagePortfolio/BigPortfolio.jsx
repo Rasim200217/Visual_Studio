@@ -65,13 +65,13 @@ export const BigPortfolio = () => {
             onClick={() => filterItem("wedding")}
             className=" hover:opacity-80 btn-hover"
           >
-            Свадебные
+            Свадебное
           </button>
           <button
             onClick={() => filterItem("subject")}
             className=" hover:opacity-80 btn-hover"
           >
-            Предметная
+            Предметка
           </button>
         </div>
         <div className="pt-4">

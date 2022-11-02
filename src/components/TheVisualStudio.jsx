@@ -21,7 +21,9 @@ export const TheVisualStudio = () => {
     <>
       <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full bg-black text-white px-12 py-20">
         <div>
-          <h2 className="font-bold text-yellow-300 text-2xl">Фотостудия</h2>
+          <h2 className="font-bold text-yellow-300 text-2xl">
+            The Visual Studio 21
+          </h2>
           <p className="pt-6 leading-6 max-w-2xl">
             Уютная камерная фотостудия в центре города Ташкент. Единое съёмочное
             пространство, разделённое фактурными зонами в стиле Loft для
@@ -38,28 +40,17 @@ export const TheVisualStudio = () => {
             Мы постарались создать атмосферную площадку для работы с
             использованием натуральных материалов и не прибегая к имитации.
           </p>
+          <br />
+          <p className="leading-6 max-w-2xl">
+            Размеры циклорамы 5х5 метра высотой 3.10 метра и хромакея 6х6 метра
+            высотой 3.10 метра. В холодную погоду вашим ногам у нас будет тепло
+            так как у нас имеются деревянные полы с подогревом.
+          </p>
           <div className="mt-10">
-            <Button onClick={handleOpen}>
-              <button
-                className="font-bold text-white px-6 py-4 sm:px-10 sm:py-5 border
-           border-yellow-300 rounded-full text-sm sm:text-base  btn-hover 
-           hover:bg-yellow-300 hover:text-black focus:bg-yellow-300
-            focus:text-black"
-              >
-                Забронировать
-              </button>
-            </Button>
+            <a href="https://t.me/vs21art" target="_blank">
+              <button className="pulsBtn">Телеграмм канал</button>
+            </a>
           </div>
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <Box className="formModal">
-              <Form handleCloseF={handleClose} />
-            </Box>
-          </Modal>
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 mt-14">
           <div className="cursor-pointer hover:text-yellow-300 btn-hover">
@@ -72,7 +63,7 @@ export const TheVisualStudio = () => {
           </div>
           <div className="cursor-pointer hover:text-yellow-300 btn-hover">
             <img className="block mx-auto" src={Img3} alt="wifi" />
-            <p className="p-3 text-center">Wi Fi</p>
+            <p className="p-3 text-center">Wi Fi (100Mb/s 5G)</p>
           </div>
           <div className="cursor-pointer hover:text-yellow-300 btn-hover">
             <img className="block mx-auto" src={Img4} alt="light" />

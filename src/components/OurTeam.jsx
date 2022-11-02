@@ -18,19 +18,19 @@ const team = [
   },
   {
     avatar: avatar_2,
-    name: "Назаров Даврон Равшанович",
+    name: "Даврон",
     desc: "Замдиректора",
     social: "https://instagram.com/soda.ql?igshid=YmMyMTA2M2Y=",
   },
   {
     avatar: avatar_3,
-    name: "Назаров Даврон Равшанович",
+    name: "Джафар",
     desc: "Оператор, Видеомонтажер",
     social: "https://instagram.com/jafar.film?igshid=YmMyMTA2M2Y=",
   },
   {
     avatar: avatar_4,
-    name: "Хасан Хожи",
+    name: "Хасан",
     desc: "Гафер (Светооператор) Администратор",
     social: "https://instagram.com/cassin.ph?igshid=YmMyMTA2M2Y=",
   },

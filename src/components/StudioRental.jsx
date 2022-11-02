@@ -4,7 +4,12 @@ import studioImg from "../assets/studio.png";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
-import { Form } from "./Form";
+
+import { Form } from "./Form.jsx";
+
+import { BsArrowDownShort } from "react-icons/bs";
+
+import "../scss/StudioRental.scss";
 
 export const StudioRental = () => {
   const [open, setOpen] = React.useState(false);
@@ -15,21 +20,26 @@ export const StudioRental = () => {
     <div className="secondaryColor grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div className="order-2 lg:order-1">
         <img
-          className="bg-cover bg-no-repeat object-cover h-96 w-full"
+          className="bg-cover bg-no-repeat object-contain sm:object-cover h-fit sm:h-80 w-full"
           src={studioImg}
           alt="studio"
         />
       </div>
-      <div className="px-12 md:px-28 pt-8 order-1 lg:order-2">
+      <div className="px-12 md:px-28 pt-8 order-1 lg:order-2 z-30">
         <h2 className="font-bold text-yellow-300 text-2xl">
-          Аренда фотостудии
+          Арендовать фотостудию
         </h2>
-        <p className=" text-white pt-6 leading-6">
-          Уютная камерная фотостудия в центре города Ташкент. Единое съёмочное
-          пространство, разделённое фактурными зонами в стиле Loft для
-          реализации любых идей и задумок.
+        <p className=" text-white pt-6 leading-6 w-62 sm:w-96">
+          <span className="font-medium">
+            Универсальная фотостудия в Ташкенте
+          </span>
+          <span>
+            {""} подойдёт под любые виды съёмок от съемок одежды до портретных
+            съемок
+          </span>
         </p>
-        <div className="grid grid-cols-2 gap-4 text-white pt-6">
+        <BsArrowDownShort size={40} className=" text-white mt-3 ml-16" />
+        {/* <div className="grid grid-cols-2 gap-4 text-white pt-6">
           <div>
             <p className="text-xs lg:text-sm">Аренда за студийный час</p>
             <p>
@@ -37,37 +47,30 @@ export const StudioRental = () => {
             </p>
           </div>
           <div>
-            <p className="text-xs lg:text-sm  w-2 sm:w-full">
-              Дополнительный свет
+            <p className="text-xs lg:text-sm sm:w-full">
+              Дополнительный свет и фоны
             </p>
             <p>
-              <span className="font-bold text-xl lg:text-2xl">+45 000</span> сум
+              <span className="font-bold text-xl lg:text-2xl">+50 000</span> сум
             </p>
           </div>
-        </div>
-        <div className="mt-8">
-          <Button onClick={handleOpen}>
-            <button
-              className="font-bold text-white px-10 py-5 border
-           border-yellow-300 rounded-full text-base btn-hover 
-           hover:bg-yellow-300 hover:text-black focus:bg-yellow-300
-            focus:text-black"
-            >
-              Забронировать
-            </button>
-          </Button>
-        </div>
+        </div> */}
+        <div className="mt-4">
+          <button onClick={handleOpen} className="pulsBtn">
+            Забронировать
+          </button>
 
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box className="formModal">
-            <Form handleCloseF={handleClose} />
-          </Box>
-        </Modal>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box className="formModal">
+              <Form handleCloseF={handleClose} />
+            </Box>
+          </Modal>
+        </div>
       </div>
     </div>
   );

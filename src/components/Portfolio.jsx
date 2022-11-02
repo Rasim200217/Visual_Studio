@@ -11,10 +11,10 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-import Img1 from "../assets/img/img1.jpg";
-import Img2 from "../assets/img/img2.jpg";
-import Img3 from "../assets/img/img3.jpg";
-import Img4 from "../assets/img/img4.jpg";
+import Img1 from "../assets/img/img3.jpg";
+import Img2 from "../assets/img/item2.jpg";
+import Img3 from "../assets/img/img10.jpg";
+import Img4 from "../assets/img/img9.jpg";
 
 import imgVideo1 from "../assets/videoImg_1.png";
 import imgVideo2 from "../assets/videoImg_2.png";
@@ -39,6 +39,12 @@ const urlVideo = [
     urlVideo: "https://player.vimeo.com/video/739444043?h=34f130324e&title=0",
     imgSrc: imgVideo2,
   },
+  {
+    id: 3,
+    urlVideo:
+      "https://player.vimeo.com/video/749182800?h=733d16fba2&portrait=0",
+    imgSrc: imgVideo2,
+  },
 ];
 
 export const Portfolio = () => {
@@ -48,10 +54,6 @@ export const Portfolio = () => {
     setTempImgSrs(imgSrc);
     setModel(true);
   };
-
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   return (
     <>
@@ -110,47 +112,25 @@ export const Portfolio = () => {
             {urlVideo.map((item, index) => {
               return (
                 <li key={index} className="p-0 cursor-pointer">
-                  <iframe
-                    src={item.urlVideo}
-                    className="w-full h-full rounded-lg"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                  {/* <Button onClick={handleOpen}>
-                    <div className="h-full transition-allease-in hover:opacity-80 relative btn-hover">
-                      <img
-                        className="w-full rounded-lg shadow-xl bg-cover bg-no-repeat object-cover relative bg-black opacity-60"
-                        src={item.imgSrc}
-                        alt=""
-                      />
-                      <BsFillPlayFill
-                        size={80}
-                        className="justify-center items-center mx-auto my-auto text-pos"
-                      />
-                    </div>
-                  </Button> */}
-                  {/* <Modal
-                    open={open}
-                    onClose={handleClose}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
+                  <div
+                    style={{ padding: "56.25% 0 0 0", position: "relative" }}
+                    className="w-full h-full"
                   >
-                    <Box className="modalVideo">
-                      <iframe
-                        src={item.urlVideo}
-                        className="w-full h-full"
-                        frameborder="0"
-                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                        allowfullscreen
-                      ></iframe>
-                      <AiOutlineClose
-                        className="text-white absolute right-0 top-52 cursor-pointer lg:top-40 sm:top-56"
-                        onClick={handleClose}
-                        size={20}
-                      />
-                    </Box>
-                  </Modal> */}
+                    <iframe
+                      src={item.urlVideo}
+                      className="w-full h-full rounded-xl"
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      frameborder="0"
+                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </li>
               );
             })}

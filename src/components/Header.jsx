@@ -1,28 +1,26 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-import { Footer } from "../components/Footer";
-import { Intro } from "../components/Intro";
-import { OurTeam } from "../components/OurTeam";
-import { PhotoStudio } from "../components/PhotoStudio";
-import { Portfolio } from "../components/Portfolio";
-import { StudioRental } from "../components/StudioRental";
-import { TheVisualStudio } from "../components/TheVisualStudio";
-
-import { ImageCarousel } from "./ImageCarousel";
+// Icons
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
+import { BsArrowDownShort } from "react-icons/bs";
 
-import Button from "@mui/material/Button";
+// Components
+import { ImageCarousel } from "./ImageCarousel";
+import { Form } from "./Form.jsx";
+
+//Library
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-import { BsFillPlayFill } from "react-icons/bs";
-
+// Style
 import "../scss/Header.scss";
 
-import image1 from "../assets/slide_1.jpg";
-import image2 from "../assets/slide_2.jpg";
-import image3 from "../assets/slide_3.jpg";
-import { Form } from "./Form.jsx";
+// Image
+import image1 from "../assets/slideStudio/slide_1.jpg";
+import image2 from "../assets/slideStudio/slide_2.jpg";
+import image3 from "../assets/slideStudio/slide_3.jpg";
 
 export const Header = () => {
   const [open, setOpen] = React.useState(false);
@@ -32,7 +30,10 @@ export const Header = () => {
   return (
     <div>
       <ImageCarousel images={[image1, image2, image3]} />
-      <div className="flex justify-between h-496 px-6 sm:px-12 md:px-28 items-center bg-black bg-opacity-70 absolute top-20 w-full">
+      <div
+        id="header"
+        className="flex justify-between h-496 px-6 sm:px-12 md:px-12 items-center bg-black bg-opacity-70 absolute top-20 w-full"
+      >
         <div>
           <div>
             <p className="font-medium sm:text-2xl text-white text-xl">
@@ -41,22 +42,37 @@ export const Header = () => {
             <h1 className="font-bold lg:text-6xl text-yellow-300 pt-4 sm:text-5xl text-3xl">
               The Visual Studio 21
             </h1>
-            <p className="text-white pt-4 sm:text-sm leading-5 sm:leading-6 text-sm w-80 md:w-96">
-              <span className="font-medium">
-                Универсальная фотостудия в Ташкенте
-              </span>
-              <span>
-                {""} подойдёт под любые виды съёмок от съемок одежды до
-                портретных съемок
-              </span>
+            <p className="text-white pt-4 sm:text-base leading-5 sm:leading-6 text-sm w-62 sm:w-80 md:w-[600px]">
+              Мы предоставляем для своих клиентов
+              <b> Циклораму / Лофт зону / Хромакей зону</b>. С ценами вы можете
+              ознакомится ниже по ссылке!
             </p>
           </div>
-          <div className="mt-10 flex">
-            <Button onClick={handleOpen}>
-              <button className="font-bold text-white px-12 py-6 md:px-12 md:py-6 border border-yellow-300 rounded-full text-base md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black">
+          <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <BsArrowDownShort size={40} className=" text-white ml-16 mb-2" />
+              <a
+                href="https://telegra.ph/Aktualnye-ceny-Prajs-list-VS21ART-2022-10-06"
+                target="_blank"
+              >
+                <button className="pulsBtn">Смотреть прайс</button>
+              </a>
+            </div>
+
+            <div>
+              <button
+                className="pulsBtn mt-3 sm:mt-[46px] ml-[2px]"
+                onClick={handleOpen}
+              >
                 Забронировать
               </button>
-            </Button>
+            </div>
+
+            <Link to="/retouch">
+              <button className="pulsBtn mt-3 sm:mt-[46px]">
+                Услуга ретуши
+              </button>
+            </Link>
 
             <Modal
               open={open}
@@ -68,22 +84,18 @@ export const Header = () => {
                 <Form handleCloseF={handleClose} />
               </Box>
             </Modal>
-
-            {/* <button className="ml-4 sm:ml-8 font-bold text-white p-4 md:p-6 border border-white rounded-full text-base btn-hover hover:bg-white hover:text-black">
-              <BsFillPlayFill size={30} />
-            </button>
-            <p className="text-white m-auto ml-4 cursor-pointer text-xs md:text-sm">
-              Презентация студии
-            </p> */}
           </div>
         </div>
         <div>
           <div className="lg:bg-white ml-3 h-16 mb-10 m-sm"></div>
           <div className="hidden lg:flex flex-col text-white">
-            <FaFacebook
-              className="icon mb-8 btn-hover hover:text-yellow-300 cursor-pointer"
-              fontSize={25}
-            />
+            <a href="https://www.facebook.com/visualstudio21/" target="_blank">
+              <FaFacebook
+                className="icon mb-8 btn-hover hover:text-yellow-300 cursor-pointer"
+                fontSize={25}
+              />
+            </a>
+
             <a href="https://www.instagram.com/vs21.art/" target="_blank">
               <FaInstagram
                 className="icon mb-8 btn-hover hover:text-yellow-300 cursor-pointer"
@@ -100,13 +112,6 @@ export const Header = () => {
           <div className="lg:bg-white h-16 m-sm ml-3 mt-10"></div>
         </div>
       </div>
-      <PhotoStudio />
-      <Portfolio />
-      <TheVisualStudio />
-      {/* <Intro /> */}
-      <StudioRental />
-      <OurTeam />
-      <Footer />
     </div>
   );
 };

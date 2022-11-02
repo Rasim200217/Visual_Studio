@@ -54,7 +54,8 @@ export const Form = (props) => {
     let message = `&#128233 <b>Заявка с сайта!</b>\n`;
     message += `&#128590 Отправитель: <b>${data.Name}</b>\n`;
     message += `&#128222 Телефон: <b>${data.MobileNumber}</b>\n`;
-    message += `&#9203 Дата бронирования: <b>${data.date}, ${data.Time}</b>`;
+    message += `&#9203 Дата бронирования: <b>${data.date}, ${data.Time}</b>\n`;
+    message += `&#127916 Выбрана зона: <b>${data.Title}</b>`;
 
     axios
       .post(URL_API, {
@@ -106,7 +107,16 @@ export const Form = (props) => {
             step="3600"
             {...register("Time", { required: true })}
           />
-
+          <select
+            placeholder="Выберите зону"
+            id="zona"
+            className="h-[47px] rounded-xl text-black m-2 p-1"
+            {...register("Title", { required: true })}
+          >
+            <option value="Лофт">Лофт</option>
+            <option value="Циклорама">Циклорама</option>
+            <option value="Хромакей зона">Хромакей зона</option>
+          </select>
           <button
             className=" mt-4 cursor-pointer font-bold btnWhite px-6 py-3 md:px-12 md:py-5 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black"
             type="submit"
@@ -122,7 +132,7 @@ export const Form = (props) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className="formModal w-full mx-auto">
+        <Box className="formModal w-full sm:w-fit mx-auto">
           <div className="flex">
             <BsCheck2Circle size={30} className="text-center text-green-400" />
             <h2 className="font-medium sm:text-2xl text-white text-xl ml-3">
