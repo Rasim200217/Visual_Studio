@@ -20,10 +20,10 @@ export const Navbar = () => {
       <div className="flex">
         <div className="flex">
           <Link to="/">
-            <img src={Logo} className="h-10 my-2" />
+            <img src={Logo} alt="logo" className="h-10 my-2" />
           </Link>
           <Link to="/video" className="block ml-6 mt-4 md:hidden">
-            <img src={RenderLink} className="h-4 mt-1" />
+            <img src={RenderLink} alt="logo" className="h-4 mt-1" />
           </Link>
         </div>
         <ul className="hidden lg:flex px-5">
@@ -45,7 +45,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link to="/video">
-              <img src={RenderLink} className="h-4 mt-1" />
+              <img src={RenderLink} alt='logo' className="h-4 mt-1" />
             </Link>
           </li>
           <li>
@@ -85,7 +85,7 @@ export const Navbar = () => {
         }
       >
         <ul className="">
-          <img src={Logo} className="h-10 ml-3" />
+          <img src={Logo} alt='logo' className="h-10 ml-3" />
           <li>
             <Link to="/">
               <HashLink to="/#header">Главная</HashLink>
@@ -120,20 +120,20 @@ export const Navbar = () => {
             <div className="flex justify-between mx-6">
               <a
                 href="https://www.facebook.com/visualstudio21/"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 <FaFacebook
                   className="icon cursor-pointer hover:text-yellow-300 btn-hover"
                   fontSize={30}
                 />
               </a>
-              <a href="https://www.instagram.com/vs21.art/" target="_blank">
+              <a href="https://www.instagram.com/vs21.art/" target="_blank" rel="noreferrer">
                 <FaInstagram
                   className="icon cursor-pointer hover:text-yellow-300 btn-hover"
                   fontSize={30}
                 />
               </a>
-              <a href="https://t.me/vs21art" target="_blank">
+              <a href="https://t.me/vs21art" target="_blank" rel="noreferrer">
                 <FaTelegram
                   className="icon cursor-pointer hover:text-yellow-300 btn-hover"
                   fontSize={30}

@@ -49,18 +49,23 @@ export const Footer = () => {
             <p className=" text-base pl-2"> +998 (90) 333-33-66</p>
           </div>
         </a>
-        <a href="">
+        <p>
           <div className="flex pt-4 cursor-pointer">
             <VscMail size={25} />
             <p className=" text-base pl-2">vusialstudio21@gmail.com</p>
           </div>
-        </a>
+        </p>
 
         <div className="flex pt-4 cursor-pointer">
           <VscLocation size={25} />
-          <p className=" text-base pl-2 w-80">
+          <a
+            href="https://www.google.com/maps/place/The+Visual+Studio+21+-+%D0%9A%D0%B8%D0%BD%D0%BE%D0%BF%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BE%D0%BD,+%D0%A4%D0%BE%D1%82%D0%BE%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%8F./@41.28231,69.193391,17z/data=!4m5!3m4!1s0x0:0x595b9c7b28d6e43b!8m2!3d41.2823098!4d69.1933906?hl=en-US"
+            target="_blank"
+            className=" text-base pl-2 w-80"
+            rel="noreferrer"
+          >
             Ташкент. Чиланзарский р-н. Фархадская ярмарка, 7 блок - 1 этаж
-          </p>
+          </a>
         </div>
       </div>
 
@@ -68,6 +73,7 @@ export const Footer = () => {
         <div class="mapouter">
           <div class="gmap_canvas">
             <iframe
+              title="The Visual Studio 21"
               className="rounded-xl	"
               width="100%"
               height="204px"

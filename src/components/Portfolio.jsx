@@ -4,12 +4,7 @@ import { Link } from "react-router-dom";
 
 import "../scss/Portfolio.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import { BsFillPlayFill } from "react-icons/bs";
 import { GiMagnifyingGlass } from "react-icons/gi";
-
-import Button from "@mui/material/Button";
-import Modal from "@mui/material/Modal";
-import Box from "@mui/material/Box";
 
 import Img1 from "../assets/img/img3.jpg";
 import Img2 from "../assets/img/item2.jpg";

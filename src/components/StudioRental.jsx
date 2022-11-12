@@ -1,7 +1,6 @@
 import React from "react";
 import studioImg from "../assets/studio.png";
 
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 

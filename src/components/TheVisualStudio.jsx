@@ -6,17 +6,8 @@ import Img3 from "../assets/benefits/wifi.png";
 import Img4 from "../assets/benefits/light.png";
 import Img5 from "../assets/benefits/car.png";
 import Img6 from "../assets/benefits/bg.png";
-import { Form } from "./Form";
-
-import Button from "@mui/material/Button";
-import Modal from "@mui/material/Modal";
-import Box from "@mui/material/Box";
 
 export const TheVisualStudio = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
   return (
     <>
       <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full bg-black text-white px-12 py-20">
@@ -47,7 +38,7 @@ export const TheVisualStudio = () => {
             так как у нас имеются деревянные полы с подогревом.
           </p>
           <div className="mt-10">
-            <a href="https://t.me/vs21art" target="_blank">
+            <a href="https://t.me/vs21art" target="_blank" rel="noreferrer">
               <button className="pulsBtn">Телеграмм канал</button>
             </a>
           </div>
