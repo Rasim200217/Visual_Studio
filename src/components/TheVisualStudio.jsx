@@ -10,7 +10,7 @@ import Img6 from "../assets/benefits/bg.png";
 export const TheVisualStudio = () => {
   return (
     <>
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full bg-black text-white px-12 py-20">
+      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 md:gap-8 h-full text-white px-12 py-20">
         <div>
           <h2 className="font-bold text-yellow-300 text-2xl">
             The Visual Studio 21
@@ -44,27 +44,27 @@ export const TheVisualStudio = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 mt-14">
-          <div className="cursor-pointer hover:text-yellow-300 btn-hover">
+          <div>
             <img className="block mx-auto" src={Img1} alt="gps" />
             <p className="p-3 text-center">Нас легко найти</p>
           </div>
-          <div className="cursor-pointer hover:text-yellow-300 btn-hover">
+          <div>
             <img className="block mx-auto" src={Img2} alt="money" />
             <p className="p-3 text-center">Форма оплаты любая</p>
           </div>
-          <div className="cursor-pointer hover:text-yellow-300 btn-hover">
+          <div>
             <img className="block mx-auto" src={Img3} alt="wifi" />
             <p className="p-3 text-center">Wi Fi (100Mb/s 5G)</p>
           </div>
-          <div className="cursor-pointer hover:text-yellow-300 btn-hover">
+          <div>
             <img className="block mx-auto" src={Img4} alt="light" />
             <p className="p-3 text-center">Различные источники света</p>
           </div>
-          <div className="cursor-pointer hover:text-yellow-300 btn-hover">
+          <div>
             <img className="block mx-auto" src={Img5} alt="car" />
             <p className="p-3 text-center">Наличие парковки</p>
           </div>
-          <div className="cursor-pointer hover:text-yellow-300 btn-hover">
+          <div>
             <img className="block mx-auto" src={Img6} alt="bg" />
             <p className="p-3 text-center">Ассортимент фонов</p>
           </div>

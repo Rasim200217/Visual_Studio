@@ -1,26 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { motion } from "framer-motion";
 
 // Icons
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 import { BsArrowDownShort } from "react-icons/bs";
 
 // Components
-import { ImageCarousel } from "./ImageCarousel";
 import { Form } from "./Form.jsx";
 
 //Library
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
+import BgVideo from "../assets/bgVideo.mp4";
+
 // Style
 import "../scss/Header.scss";
-
-// Image
-import image1 from "../assets/slideStudio/slide_1.jpg";
-import image2 from "../assets/slideStudio/slide_2.jpg";
-import image3 from "../assets/slideStudio/slide_3.jpg";
 
 export const Header = () => {
   const [open, setOpen] = React.useState(false);
@@ -28,11 +25,14 @@ export const Header = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <ImageCarousel images={[image1, image2, image3]} />
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
       <div
         id="header"
-        className="flex justify-between h-496 px-6 sm:px-12 md:px-12 items-center bg-black bg-opacity-70 absolute top-20 w-full"
+        className="flex right-0 justify-between h-screen sm:px-8 md:px-8 items-center"
       >
         <div>
           <div>
@@ -112,6 +112,6 @@ export const Header = () => {
           <div className="lg:bg-white h-16 m-sm ml-3 mt-10"></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

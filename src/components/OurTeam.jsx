@@ -28,21 +28,15 @@ const team = [
     desc: "Оператор, Видеомонтажер",
     social: "https://instagram.com/jafar.film?igshid=YmMyMTA2M2Y=",
   },
-  {
-    avatar: avatar_4,
-    name: "Хасан",
-    desc: "Гафер (Светооператор) Администратор",
-    social: "https://instagram.com/cassin.ph?igshid=YmMyMTA2M2Y=",
-  },
 ];
 
 export const OurTeam = () => {
   return (
-    <div id="team" className="h-full bg-black text-white px-12 py-20">
+    <div id="team" className="h-full text-white px-12 py-8">
       <div>
         <h2 className="font-bold text-yellow-300 text-2xl">Наша команда</h2>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-12 text-center pt-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-12 text-center pt-6">
         {team.map((item, index) => {
           return (
             <div

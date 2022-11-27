@@ -1,0 +1,33 @@
+.navbar {
+  @apply text-center items-center w-64 flex-shrink-0 bg-black text-white h-screen sticky top-0 overflow-auto flex flex-col justify-center;
+  ul {
+    li {
+      @apply p-3;
+
+      a.active {
+        @apply text-yellow-300;
+      }
+    }
+  }
+
+  .logo_active {
+    a.active {
+      @apply border border-red-600 pb-4 pt-2 px-4 rounded-md;
+    }
+  }
+  .logo_active_vs21 {
+    a.active {
+      @apply border border-yellow-300 pb-9 pt-2 px-4 rounded-md;
+    }
+  }
+}
+.mantine-w29q45 {
+  margin: 0;
+  background-color: black;
+}
+.mantine-8nr514:hover {
+  background-color: transparent;
+}
+.mantine-1dcetaa:hover {
+  background-color: transparent;
+}

@@ -17,6 +17,23 @@
     box-shadow: 0 0 0 20px rgba(18, 123, 230, 0);
   }
 }
-.MuiTouchRipple-root .css-8je8zh-MuiTouchRipple-root {
-  
+
+.pulsBtnRender {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply bg-red-600 rounded-full;
+  padding: 16px 24px;
+  animation: radial-pulseRender 1s infinite;
+  font-weight: 600;
+  font-size: 16px;
+}
+@keyframes radial-pulseRender {
+  0% {
+    box-shadow: 0 0 0 0px rgba(236, 49, 49, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(18, 123, 230, 0);
+  }
 }

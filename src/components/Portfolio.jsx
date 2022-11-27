@@ -60,14 +60,14 @@ export const Portfolio = () => {
           size={20}
         />
       </div>
-      <div className="text-white px-12 pt-20 secondaryColor h-auto pb-20 ">
+      <div className="text-white px-6 pt-20 h-auto pb-20">
         <div>
           <h2 className="font-bold text-yellow-300 text-2xl">Портфолио</h2>
           <p className="pt-6 text-lg">Фотографии</p>
         </div>
 
         {/* фотографии */}
-        <div className="flex-1 pt-4">
+        <div className="flex-1 pt-4 relative top-0">
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {data.map((item, index) => {
               return (

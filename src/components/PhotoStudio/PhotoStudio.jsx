@@ -1,6 +1,7 @@
 import React from "react";
 
 import { StudioSlider } from "./StudioSlider";
+import { motion } from "framer-motion";
 
 import "../../scss/PhotoStudio.scss";
 
@@ -20,7 +21,12 @@ export const PhotoStudio = () => {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-[450px_minmax(600px,_1fr)_100px] md:gap-0 h-full secondaryColor text-white px-12 py-14">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="grid grid-cols-1 gap-0 lg:grid-cols-2 md:gap-0 text-white px-8 py-14 h-full"
+      >
         <div>
           <a id="fotostudio" className="font-bold text-yellow-300 text-2xl">
             Фотостудия
@@ -183,7 +189,7 @@ export const PhotoStudio = () => {
         <div>
           <StudioSlider />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -22,12 +22,10 @@
     font-family: "Gotham Pro", sans-serif;
     font-weight: 300;
     font-size: 14px;
-    background-color: #000;
+    background-color: black;
   }
 
   li {
-    @apply p-4;
-
     a {
       cursor: pointer;
       transition: 0.3s;

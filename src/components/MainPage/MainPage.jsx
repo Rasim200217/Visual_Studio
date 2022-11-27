@@ -9,7 +9,7 @@ import { Footer } from "../Footer";
 
 export const MainPage = () => {
   return (
-    <div>
+    <div className="snap-y snap-mandatory">
       <Header />
       <PhotoStudio />
       <TheVisualStudio />

@@ -1,0 +1,119 @@
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #e0dd40;
+}
+.option-input:checked::before {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  content: "\f00c";
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-family: "Font Awesome 5 Free";
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #e0dd40;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.form_group {
+  @apply flex flex-col justify-center w-96 mx-auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    color: #000;
+
+    &:hover {
+      border-color: yellow;
+    }
+    &:focus {
+      border-color: yellow;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .mantine-1j45h84 {
+    min-height: 2px;
+    margin-top: calc(39px / 2);
+    margin-bottom: calc(10px - 2px);
+  }
+  .mantine-15v1h2n {
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+  .mantine-15tveoz {
+    min-height: 2px;
+    margin-top: calc(39px / 2);
+    margin-bottom: calc(10px - 2px);
+  }
+}

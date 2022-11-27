@@ -16,7 +16,7 @@ export const StudioRental = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <div className="secondaryColor grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
       <div className="order-2 lg:order-1">
         <img
           className="bg-cover bg-no-repeat object-contain sm:object-cover h-fit sm:h-80 w-full"
@@ -24,11 +24,11 @@ export const StudioRental = () => {
           alt="studio"
         />
       </div>
-      <div className="px-12 md:px-28 pt-8 order-1 lg:order-2 z-30">
+      <div className="px-12 md:px-16 pt-8 order-1 lg:order-2 z-30">
         <h2 className="font-bold text-yellow-300 text-2xl">
           Арендовать фотостудию
         </h2>
-        <p className=" text-white pt-6 leading-6 w-62 sm:w-96">
+        <p className=" text-white pt-6 leading-6 w-62 md:w-72 lg:w-62">
           <span className="font-medium">
             Универсальная фотостудия в Ташкенте
           </span>

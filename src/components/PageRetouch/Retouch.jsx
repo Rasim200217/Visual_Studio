@@ -14,10 +14,7 @@ import { Footer } from "../Footer";
 export const Retouch = () => {
   return (
     <>
-      <div
-        className="px-12 py-20"
-        style={{ backgroundImage: `url(${logoRetouch})` }}
-      >
+      <div className="px-12 py-20">
         <div>
           <div>
             <h2 className=" text-yellow-300 font-bold text-3xl sm:text-6xl">

@@ -46,9 +46,9 @@ export const BigPortfolio = () => {
           size={20}
         />
       </div>
-      <div className=" px-12 pt-20">
+      <div className=" px-12 pt-8">
         <h2 className="font-bold text-yellow-300 text-2xl">Фотографии</h2>
-        <div className=" text-white flex justify-between w-76 md:w-96 pt-6 text-xs md:text-sm">
+        <div className=" text-white flex justify-between w-76 md:w-60 pt-6 text-xs md:text-sm">
           <button
             onClick={() => setItems(Gallery)}
             className=" hover:opacity-80 btn-hover"
@@ -61,12 +61,12 @@ export const BigPortfolio = () => {
           >
             Портрет
           </button>
-          <button
+          {/* <button
             onClick={() => filterItem("wedding")}
             className=" hover:opacity-80 btn-hover"
           >
             Свадебное
-          </button>
+          </button> */}
           <button
             onClick={() => filterItem("subject")}
             className=" hover:opacity-80 btn-hover"
