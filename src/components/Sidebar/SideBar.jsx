@@ -7,8 +7,13 @@ import { motion } from "framer-motion";
 import "../../scss/Navbar.scss";
 import Formbar from "./Formbar";
 
+import LogoFreska from "../../assets/logo/freskaLogo.svg";
+import { IoMdArrowDropright, IoMdArrowDropdown } from "react-icons/io";
+
 const SideBar = () => {
   const [isVs21, setIsVs21] = React.useState(true);
+  const [isSubMenuOne, setIsSubMenuOne] = React.useState(false);
+  const [isSubMenuTwo, setIsSubMenuTwo] = React.useState(false);
 
   return (
     <div className="navbar">
@@ -18,7 +23,7 @@ const SideBar = () => {
             onClick={() => setIsVs21(true)}
             className="cursor-pointer logo_active_vs21"
           >
-            <NavLink to="/" defaultChecked>
+            <NavLink to="/" className={isVs21 ? "active" : ""}>
               <svg
                 className="inline-block"
                 width="80"
@@ -46,11 +51,96 @@ const SideBar = () => {
               </svg>
             </NavLink>
           </li>
+          {/* vs21 */}
+          {isVs21 ? (
+            <motion.ul
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.5 }}
+            >
+              <li>
+                <NavLink to="/">
+                  <HashLink to="/#header">Главная</HashLink>
+                </NavLink>
+              </li>
+
+              <div>
+                <li
+                  className="flex items-center cursor-pointer"
+                  onClick={() => setIsSubMenuOne((old) => !old)}
+                >
+                  {isSubMenuOne ? (
+                    <IoMdArrowDropdown />
+                  ) : (
+                    <IoMdArrowDropright />
+                  )}
+                  Залы
+                </li>
+                {isSubMenuOne ? (
+                  <div className="ml-6">
+                    <li className="-mt-2">Циклорама</li>
+                    <li className="-mt-2">Хромакей</li>
+                    <li className="-mt-2">Лофт</li>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              <div>
+                <li
+                  className="flex items-center cursor-pointer"
+                  onClick={() => setIsSubMenuTwo((old) => !old)}
+                >
+                  {isSubMenuTwo ? (
+                    <IoMdArrowDropdown />
+                  ) : (
+                    <IoMdArrowDropright />
+                  )}
+                  Услуги
+                </li>
+                {isSubMenuTwo ? (
+                  <div className="ml-6">
+                    <li className="-mt-2">
+                      <a
+                        href="https://telegra.ph/Aktualnye-ceny-Prajs-list-VS21ART-2022-10-06"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Price List
+                      </a>
+                    </li>
+                    <li className="-mt-2">
+                      <NavLink to="vs21/retouch">Ретушь</NavLink>
+                    </li>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              <li>
+                <NavLink to="vs21/portfolio">Портфолио</NavLink>
+              </li>
+              <li>
+                <HashLink to="#location">Контакты</HashLink>
+              </li>
+              {/* <li>
+            <HashLink to="#team">Команда</HashLink>
+          </li>
+          <li>
+            <a href="#location">Где мы?</a>
+          </li> */}
+            </motion.ul>
+          ) : (
+            ""
+          )}
+
           <li
             onClick={() => setIsVs21(false)}
             className="cursor-pointer logo_active"
           >
-            <NavLink to="/render/main">
+            <NavLink to="/render">
               <svg
                 className="inline-block"
                 width="100"
@@ -68,59 +158,18 @@ const SideBar = () => {
               </svg>
             </NavLink>
           </li>
+
+          <li
+            onClick={() => setIsVs21(false)}
+            className="cursor-pointer logo_active"
+          >
+            <a href="http://freskatm.uz/" target="_blank" rel="noreferrer">
+              <img src={LogoFreska} alt="" width={100} className="mx-auto" />
+            </a>
+          </li>
         </ul>
       </div>
 
-      {/* vs21 */}
-      {isVs21 ? (
-        <motion.ul
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-        >
-          <li>
-            <NavLink to="/">
-              <HashLink to="/#header">Главная</HashLink>
-            </NavLink>
-          </li>
-          {/* <li>
-            <HashLink to="/#fotostudio">Фотостудия</HashLink>
-          </li> */}
-          <li>
-            <NavLink to="vs21/retouch">Ретушь</NavLink>
-          </li>
-          <li>
-            <NavLink to="vs21/portfolio">Портфолио</NavLink>
-          </li>
-          {/* <li>
-            <HashLink to="#team">Команда</HashLink>
-          </li>
-          <li>
-            <a href="#location">Где мы?</a>
-          </li> */}
-        </motion.ul>
-      ) : (
-        ""
-      )}
-
-      {/* render */}
-      {!isVs21 ? (
-        <ul>
-          {/* <li>
-            <NavLink className=" active:text-yellow-300" to="/render/main">
-              Главная
-            </NavLink>
-          </li> */}
-          {/* <li>
-            <HashLink to="/render/main/#video_portfolio">Видео</HashLink>
-          </li>
-          <li>
-            <HashLink to="/#video">Заполнить бриф</HashLink>
-          </li> */}
-        </ul>
-      ) : (
-        ""
-      )}
       <Formbar />
     </div>
   );

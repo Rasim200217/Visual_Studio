@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
-import { BsTelephone } from "react-icons/bs";
+import { BsTelephone, BsVimeo } from "react-icons/bs";
 import { VscLocation, VscMail } from "react-icons/vsc";
 
 export const FooterRender = () => {
@@ -28,27 +28,20 @@ export const FooterRender = () => {
           </svg>
         </h2>
         <div className="order-2 md:order-1">
-          <div className="flex justify-between w-40 pt-8 ">
-            {/* <a href="https://www.facebook.com/visualstudio21/" target="_blank">
-              <FaFacebook
-                className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
-                fontSize={30}
-              />
-            </a> */}
-
+          <div className="flex justify-between w-20 pt-8 ">
             <a href="https://www.instagram.com/renderquality/" target="_blank">
               <FaInstagram
-                className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
+                className="icon mb-8 text-white btn-hover hover:text-red-600 cursor-pointer"
                 fontSize={30}
               />
             </a>
 
-            {/* <a href="https://t.me/vs21art" target="_blank">
-              <FaTelegram
-                className="icon mb-8 text-white btn-hover hover:text-yellow-300 cursor-pointer"
+            <a href="https://vimeo.com/user181182409" target="_blank">
+              <BsVimeo
+                className="icon mb-8 text-white btn-hover hover:text-red-600 cursor-pointer"
                 fontSize={30}
               />
-            </a> */}
+            </a>
           </div>
           <p className="text-white">
             Copyright © 2019 - 2022 zxdk All Right Reserved.

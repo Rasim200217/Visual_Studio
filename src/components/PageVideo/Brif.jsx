@@ -85,28 +85,31 @@ export const Brif = () => {
 
   return (
     <motion.div
-      className="h-full pb-16 text-white px-8"
+      className=" text-white px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
       <div className={startBrief ? "hidden" : "block"}>
-        <h1 className=" text-[30px] uppercase font-bold mb-20">
-          Пройдите опрос <br /> из 10 вопросов!
+        <h1 className=" text-[30px] uppercase font-bold mb-8">
+          Пройдите опрос <br />
         </h1>
 
-        <div className=" text-lg mb-20 flex items-center ">
+        <div className=" text-lg mb-8 flex">
           <img src={startBriefImg} className="w-28 mr-3" alt="start" />
           <div>
             <p>
               и получите{" "}
-              <span className=" text-yellow-300 font-semibold">скидку 10%</span>{" "}
+              <span className=" text-red-600 font-semibold">скидку 10%</span>{" "}
               <br /> на стоимость вашего видео в течение дня
             </p>
           </div>
         </div>
 
-        <button onClick={() => setStartBrief(true)} className="pulsBtnRender">
+        <button
+          onClick={() => setStartBrief(true)}
+          className="pulsBtnRender btn-hover"
+        >
           Начать тест
         </button>
       </div>

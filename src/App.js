@@ -16,11 +16,11 @@ function App() {
         <NavbarNew />
       </div>
 
-      <div className="">
+      <div style={{ width: "-webkit-fill-available" }}>
         <Routes>
           <Route exact path="/" element={<MainPage />} />
           <Route path="/vs21/portfolio" element={<BigPortfolio />} />
-          <Route path="/render/main" element={<PortfolioVideo />} />
+          <Route path="/render" element={<PortfolioVideo />} />
           <Route path="/vs21/retouch" element={<Retouch />} />
           <Route path="/*" element={<PageNotFound />} />
         </Routes>

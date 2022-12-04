@@ -257,7 +257,7 @@ export const Retouch = () => {
         </div>
       </div>
 
-      <div className="px-12 py-20 text-white">
+      {/* <div className="px-12 py-20 text-white">
         <div className="grid grid-cols-1 gap-4 lg:gap-11 sm:grid-cols-2 items-center">
           <div>
             <p className=" text-xl font-semibold">Ретушер</p>
@@ -296,7 +296,7 @@ export const Retouch = () => {
             <img src={Hasan} alt="" className=" rounded-xl mx-auto" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </>

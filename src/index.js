@@ -7,8 +7,6 @@ import App from "./App";
 import { HelmetProvider } from "react-helmet-async";
 import reportWebVitals from "./reportWebVitals";
 
-import BgVideo from "./assets/bgVideo.mp4";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -20,13 +18,6 @@ root.render(
           content="The Visual Studio – это творческая команда профессионалов, которая имеет огромный багаж опыта и знаний в таких сферах как фото-кино съемка, саунд-дизай и пр."
         />
       </HelmetProvider>
-      <video
-        src={BgVideo}
-        autoPlay
-        loop
-        muted
-        className="w-full h-screen object-cover opacity-10 fixed -z-10"
-      />
       <App />
     </BrowserRouter>
   </React.StrictMode>

@@ -1,39 +1,28 @@
 .pulsBtn {
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @apply bg-yellow-400 rounded-full;
-  padding: 16px 24px;
-  animation: radial-pulse 1s infinite;
-  font-weight: 600;
-  font-size: 16px;
-}
-@keyframes radial-pulse {
-  0% {
-    box-shadow: 0 0 0 0px rgba(250, 204, 21, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(18, 123, 230, 0);
-  }
+  @apply font-bold text-white px-6 py-4 sm:px-10 sm:py-5 border border-yellow-300 rounded-full text-sm sm:text-base
+           hover:bg-yellow-300 hover:text-black focus:bg-yellow-300
+            focus:text-black;
+  // color: black;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   @apply bg-yellow-400 rounded-full;
+  //   padding: 16px 24px;
+  //   animation: radial-pulse 1s infinite;
+  //   font-weight: 600;
+  //   font-size: 16px;
+  // }
+  // @keyframes radial-pulse {
+  //   0% {
+  //     box-shadow: 0 0 0 0px rgba(250, 204, 21, 0.8);
+  //   }
+  //   100% {
+  //     box-shadow: 0 0 0 20px rgba(18, 123, 230, 0);
+  //   };
 }
 
 .pulsBtnRender {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @apply bg-red-600 rounded-full;
-  padding: 16px 24px;
-  animation: radial-pulseRender 1s infinite;
-  font-weight: 600;
-  font-size: 16px;
-}
-@keyframes radial-pulseRender {
-  0% {
-    box-shadow: 0 0 0 0px rgba(236, 49, 49, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(18, 123, 230, 0);
-  }
+  @apply font-bold text-white px-6 py-4 sm:px-10 sm:py-5 border border-red-600 rounded-full text-sm sm:text-base
+           hover:bg-red-600 hover:text-white focus:bg-red-600
+            focus:text-white;
 }

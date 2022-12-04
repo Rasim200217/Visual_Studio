@@ -32,47 +32,30 @@ export const Header = () => {
     >
       <div
         id="header"
-        className="flex right-0 justify-between h-screen sm:px-8 md:px-8 items-center"
+        className="flex right-0 justify-between h-full sm:px-8 md:px-8 items-center py-36"
       >
         <div>
           <div>
-            <p className="font-medium sm:text-2xl text-white text-xl">
+            {/* <p className="font-medium sm:text-2xl text-white text-xl">
               Добро пожаловать
-            </p>
+            </p> */}
             <h1 className="font-bold lg:text-6xl text-yellow-300 pt-4 sm:text-5xl text-3xl">
               The Visual Studio 21
             </h1>
             <p className="text-white pt-4 sm:text-base leading-5 sm:leading-6 text-sm w-62 sm:w-80 md:w-[600px]">
-              Мы предоставляем для своих клиентов
-              <b> Циклораму / Лофт зону / Хромакей зону</b>. С ценами вы можете
-              ознакомится ниже по ссылке!
+              Фотостудии под любые виды съемок и мероприятия. <br /> Аренда
+              Белой / Хромакей циклорамы и Лофт зоны.
             </p>
           </div>
           <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <BsArrowDownShort size={40} className=" text-white ml-16 mb-2" />
-              <a
-                href="https://telegra.ph/Aktualnye-ceny-Prajs-list-VS21ART-2022-10-06"
-                target="_blank"
-              >
-                <button className="pulsBtn">Смотреть прайс</button>
-              </a>
-            </div>
-
-            <div>
               <button
-                className="pulsBtn mt-3 sm:mt-[46px] ml-[2px]"
+                className="pulsBtn mt-3 sm:mt-[46px] ml-[2px] btn-hover"
                 onClick={handleOpen}
               >
                 Забронировать
               </button>
             </div>
-
-            <Link to="/retouch">
-              <button className="pulsBtn mt-3 sm:mt-[46px]">
-                Услуга ретуши
-              </button>
-            </Link>
 
             <Modal
               open={open}

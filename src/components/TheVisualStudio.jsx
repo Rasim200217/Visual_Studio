@@ -1,6 +1,6 @@
 import React from "react";
 
-import Img1 from "../assets/benefits/gps.png";
+import Img1 from "../assets/benefits/shower.png";
 import Img2 from "../assets/benefits/oplata.png";
 import Img3 from "../assets/benefits/wifi.png";
 import Img4 from "../assets/benefits/light.png";
@@ -39,14 +39,14 @@ export const TheVisualStudio = () => {
           </p>
           <div className="mt-10">
             <a href="https://t.me/vs21art" target="_blank" rel="noreferrer">
-              <button className="pulsBtn">Телеграмм канал</button>
+              <button className="pulsBtn btn-hover">Телеграмм канал</button>
             </a>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 mt-14">
           <div>
             <img className="block mx-auto" src={Img1} alt="gps" />
-            <p className="p-3 text-center">Нас легко найти</p>
+            <p className="p-3 text-center">Душ с горячей водой</p>
           </div>
           <div>
             <img className="block mx-auto" src={Img2} alt="money" />
@@ -56,10 +56,10 @@ export const TheVisualStudio = () => {
             <img className="block mx-auto" src={Img3} alt="wifi" />
             <p className="p-3 text-center">Wi Fi (100Mb/s 5G)</p>
           </div>
-          <div>
+          {/* <div>
             <img className="block mx-auto" src={Img4} alt="light" />
             <p className="p-3 text-center">Различные источники света</p>
-          </div>
+          </div> */}
           <div>
             <img className="block mx-auto" src={Img5} alt="car" />
             <p className="p-3 text-center">Наличие парковки</p>

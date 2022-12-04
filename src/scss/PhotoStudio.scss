@@ -9,6 +9,7 @@
   box-shadow: 24;
   padding: 2em;
   border-radius: 20px;
+
   & p {
     display: none;
   }
@@ -23,7 +24,7 @@
   }
   @media screen and (max-width: 760px) {
     & div {
-      padding-top: 12px;
+      padding-top: 0px;
     }
     & h3 {
       font-size: 16px;
@@ -33,14 +34,14 @@
       margin-top: 4px;
     }
     & p {
-      padding-top: 6px;
+      padding-top: 4px;
       display: inline-block;
     }
   }
   @media screen and (max-width: 400px) {
     padding: 16px;
     & div {
-      padding-top: 4px;
+      padding-top: 2px;
     }
     & h3 {
       font-size: 16px;

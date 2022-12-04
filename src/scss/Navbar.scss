@@ -1,5 +1,5 @@
 .navbar {
-  @apply text-center items-center w-64 flex-shrink-0 bg-black text-white h-screen sticky top-0 overflow-auto flex flex-col justify-center;
+  @apply items-center w-64 flex-shrink-0 bg-black text-white h-screen sticky top-0 overflow-auto flex flex-col justify-center;
   ul {
     li {
       @apply p-3;

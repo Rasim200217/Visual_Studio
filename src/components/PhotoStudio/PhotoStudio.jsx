@@ -14,6 +14,9 @@ import img3 from "../../assets/equipment/image_3.jpg";
 import img4 from "../../assets/equipment/image_4.jpg";
 import img5 from "../../assets/equipment/image_5.jpg";
 import img6 from "../../assets/equipment/image_6.jpg";
+import img7 from "../../assets/equipment/image_7.jpg";
+import img8 from "../../assets/equipment/image_8.jpg";
+import img9 from "../../assets/equipment/image_9.jpg";
 
 export const PhotoStudio = () => {
   const [open, setOpen] = React.useState(false);
@@ -180,6 +183,55 @@ export const PhotoStudio = () => {
                   </div>
                   <p className="text-white text-xs leading-5">
                     <span className=" font-medium">Тубусы с фильтрами</span>
+                  </p>
+                </div>
+                <div className="column">
+                  <div className="post">
+                    <div className="overlay text-white text-center">
+                      <span className=" text-base font-semibold">
+                        Отражатели
+                      </span>
+                    </div>
+                    <img
+                      className="rounded-xl md:w-full lg:w-full"
+                      src={img9}
+                      alt=""
+                    />
+                  </div>
+                  <p className="text-white text-xs leading-5">
+                    <span className=" font-medium">Отражатели</span>
+                  </p>
+                </div>
+                <div className="column">
+                  <div className="post">
+                    <div className="overlay text-white text-center">
+                      <span className=" text-base font-semibold">
+                        Стойки (журавль)
+                      </span>
+                    </div>
+                    <img
+                      className="rounded-xl md:w-full lg:w-full"
+                      src={img8}
+                      alt=""
+                    />
+                  </div>
+                  <p className="text-white text-xs leading-5">
+                    <span className=" font-medium">Стойки (журавль)</span>
+                  </p>
+                </div>
+                <div className="column">
+                  <div className="post">
+                    <div className="overlay text-white text-center">
+                      <span className=" text-base font-semibold">Фоны</span>
+                    </div>
+                    <img
+                      className="rounded-xl md:w-full lg:w-full"
+                      src={img7}
+                      alt=""
+                    />
+                  </div>
+                  <p className="text-white text-xs leading-5">
+                    <span className=" font-medium">Фоны</span>
                   </p>
                 </div>
               </div>

@@ -11,7 +11,7 @@ const NavbarNew = () => {
 
   return (
     <div className="h-screen sticky top-0 overflow-auto">
-      <div className=" hidden lg:block ">
+      <div className="hidden lg:block">
         <SideBar />
       </div>
       <div>
