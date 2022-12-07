@@ -10,6 +10,7 @@ import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Masonry from "@mui/lab/Masonry/Masonry";
 import { Footer } from "../Footer";
+import FooterForm from "../FooterForm";
 
 import Vs21Video from "../../assets/studioMove.mov";
 
@@ -105,6 +106,7 @@ export const BigPortfolio = () => {
         </div>
       </div>
       <Footer />
+      <FooterForm />
     </>
   );
 };

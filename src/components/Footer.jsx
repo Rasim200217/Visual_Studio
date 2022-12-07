@@ -11,7 +11,7 @@ export const Footer = () => {
       {" "}
       <div
         id="location"
-        className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-4 px-8 pt-12 pb-12"
+        className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-4 px-8 pt-12 pb-6"
       >
         <div>
           <h2 className="font-bold text-yellow-300 text-2xl md:text-xl">
@@ -96,9 +96,6 @@ export const Footer = () => {
         </div>
       </div>
       {/* Form */}
-      <div>
-        <FooterForm />
-      </div>
     </>
   );
 };

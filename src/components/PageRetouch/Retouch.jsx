@@ -10,6 +10,7 @@ import Hasan from "../../assets/team/hasan.jpg";
 
 import { BsCheckLg, BsPlusLg } from "react-icons/bs";
 import { Footer } from "../Footer";
+import FooterForm from "../FooterForm";
 
 import Vs21Video from "../../assets/studioMove.mov";
 
@@ -308,6 +309,7 @@ export const Retouch = () => {
       </div> */}
 
       <Footer />
+      <FooterForm />
     </>
   );
 };

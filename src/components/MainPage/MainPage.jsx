@@ -6,6 +6,7 @@ import { StudioRental } from "../StudioRental";
 import { Portfolio } from "../Portfolio";
 import { OurTeam } from "../OurTeam";
 import { Footer } from "../Footer";
+import FooterForm from "../FooterForm";
 import Vs21Video from "../../assets/studioMove.mov";
 
 export const MainPage = () => {
@@ -25,6 +26,7 @@ export const MainPage = () => {
       {/* <Portfolio /> */}
       {/* <OurTeam /> */}
       <Footer />
+      <FooterForm />
     </div>
   );
 };
