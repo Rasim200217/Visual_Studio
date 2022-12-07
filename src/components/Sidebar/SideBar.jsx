@@ -23,7 +23,7 @@ const SideBar = () => {
             onClick={() => setIsVs21(true)}
             className="cursor-pointer logo_active_vs21"
           >
-            <NavLink to="/" className={isVs21 ? "active" : ""}>
+            <NavLink to="/" className={isVs21 ? "active" : "pb-9 pt-2 px-4"}>
               <svg
                 className="inline-block"
                 width="80"
@@ -78,7 +78,9 @@ const SideBar = () => {
                 </li>
                 {isSubMenuOne ? (
                   <div className="ml-6">
-                    <li className="-mt-2">Циклорама</li>
+                    <li className="-mt-2">
+                      <NavLink to="/vs21/cyclorama">Циклорама</NavLink>
+                    </li>
                     <li className="-mt-2">Хромакей</li>
                     <li className="-mt-2">Лофт</li>
                   </div>
@@ -140,7 +142,7 @@ const SideBar = () => {
             onClick={() => setIsVs21(false)}
             className="cursor-pointer logo_active"
           >
-            <NavLink to="/render">
+            <NavLink to="/render" className="pb-4 pt-2 px-4">
               <svg
                 className="inline-block"
                 width="100"

@@ -116,7 +116,7 @@ export const Brif = () => {
 
       <div className={startBrief ? "block" : "hidden"}>
         <Stepper
-          color="yellow"
+          color="red"
           active={active}
           onStepClick={setActive}
           breakpoint="sm"

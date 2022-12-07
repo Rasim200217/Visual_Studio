@@ -83,7 +83,7 @@ export const PortfolioVideo = () => {
                       <img
                         src={item.urlImg}
                         alt=""
-                        className=" w-24 sm:w-32 md:w-full lg:w-52"
+                        className="w-24 sm:w-32 md:w-full lg:w-52"
                       />
                     </li>
                   );

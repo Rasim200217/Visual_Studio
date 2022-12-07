@@ -11,9 +11,18 @@ import Hasan from "../../assets/team/hasan.jpg";
 import { BsCheckLg, BsPlusLg } from "react-icons/bs";
 import { Footer } from "../Footer";
 
+import Vs21Video from "../../assets/studioMove.mov";
+
 export const Retouch = () => {
   return (
     <>
+      <video
+        src={Vs21Video}
+        autoPlay
+        loop
+        muted
+        className="w-full h-screen object-cover opacity-20 fixed -z-10"
+      />
       <div className="px-12 py-20">
         <div>
           <div>

@@ -8,6 +8,7 @@ import { Retouch } from "./components/PageRetouch/Retouch";
 import { PortfolioVideo } from "./components/PageVideo/PortfolioVideo";
 import { PageNotFound } from "./components/PageNotFound/PageNotFound";
 import NavbarNew from "./components/Sidebar/NavbarNew";
+import Cyclorama from "./components/Cyclorama/Cyclorama";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/vs21/portfolio" element={<BigPortfolio />} />
           <Route path="/render" element={<PortfolioVideo />} />
           <Route path="/vs21/retouch" element={<Retouch />} />
+          <Route path="/vs21/cyclorama" element={<Cyclorama />} />
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </div>

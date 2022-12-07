@@ -3,11 +3,11 @@ import ECO from "../../assets/company/Eco.svg";
 import KNAUF from "../../assets/company/Knauf.svg";
 import MITC from "../../assets/company/MITC.svg";
 import OZTO from "../../assets/company/Ozto.svg";
-import PAYME from "../../assets/company/Payme.svg";
+import IDEA from "../../assets/company/Idea.svg";
 import PIE from "../../assets/company/Pie.svg";
 import SONY from "../../assets/company/Sony.svg";
 import UZTELECOM from "../../assets/company/Uztelecom.svg";
-import TEXHOMART from "../../assets/company/texnomart.svg";
+import ACCERMAN from "../../assets/company/Accerman.svg";
 import Мактабгача from "../../assets/company/Мактабгача.svg";
 
 export const DateCompany = [
@@ -27,7 +27,7 @@ export const DateCompany = [
     urlImg: OZTO,
   },
   {
-    urlImg: PAYME,
+    urlImg: IDEA,
   },
   {
     urlImg: PIE,
@@ -39,7 +39,7 @@ export const DateCompany = [
     urlImg: UZTELECOM,
   },
   {
-    urlImg: TEXHOMART,
+    urlImg: ACCERMAN,
   },
   {
     urlImg: Мактабгача,

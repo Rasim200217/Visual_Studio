@@ -26,7 +26,7 @@
   background: #9faab7;
 }
 .option-input:checked {
-  background: #e0dd40;
+  @apply bg-red-600;
 }
 .option-input:checked::before {
   width: 40px;
@@ -44,7 +44,7 @@
   -webkit-animation: click-wave 0.65s;
   -moz-animation: click-wave 0.65s;
   animation: click-wave 0.65s;
-  background: #e0dd40;
+  @apply bg-red-600;
   content: "";
   display: block;
   position: relative;

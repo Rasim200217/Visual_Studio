@@ -11,6 +11,8 @@ import Paper from "@mui/material/Paper";
 import Masonry from "@mui/lab/Masonry/Masonry";
 import { Footer } from "../Footer";
 
+import Vs21Video from "../../assets/studioMove.mov";
+
 export const BigPortfolio = () => {
   const [items, setItems] = useState(Gallery);
 
@@ -38,6 +40,13 @@ export const BigPortfolio = () => {
 
   return (
     <>
+      <video
+        src={Vs21Video}
+        autoPlay
+        loop
+        muted
+        className="w-full h-screen object-cover opacity-20 fixed -z-10"
+      />
       <div className={model ? "model open" : "model"}>
         <img src={tempImgSrc} alt="" />
         <AiOutlineClose

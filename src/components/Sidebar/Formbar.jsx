@@ -66,10 +66,10 @@ const Formbar = () => {
           </div>
         </a>
         <button
-          className="mt-2 font-bold hover:text-yellow-300 btn-hover border-b hover:border-none"
+          className="mt-6 font-bold hover:text-yellow-300 btn-hover border-b hover:border-none"
           onClick={handleOpen}
         >
-          Перезвонить мне
+          Обратный звонок
         </button>
       </div>
       <div>
@@ -81,7 +81,7 @@ const Formbar = () => {
         >
           <Box className="formModal w-full sm:w-fit mx-auto">
             <h3 className=" text-white font-bold uppercase text-lg text-center">
-              Очень заняты? <br /> Понимаем! Перезвоним
+              Заказать обратный звонок
             </h3>
             <div className="flex mt-3">
               <form className="form" onSubmit={sendEmail} ref={form}>
@@ -103,7 +103,11 @@ const Formbar = () => {
                   type="tel"
                   placeholder="Номер телефона"
                 />
-
+                <textarea
+                  placeholder="Ваш комментарий"
+                  className=" text-black rounded-lg w-[320px] m-[10px] p-2"
+                  name="user_comment"
+                ></textarea>
                 <button
                   className=" mt-4 cursor-pointer font-bold btnWhite px-6 py-3 md:px-12 md:py-5 border border-yellow-300 rounded-full text-sm md:text-base btn-hover hover:bg-yellow-300 hover:text-black focus:bg-yellow-300 focus:text-black"
                   type="submit"
