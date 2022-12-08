@@ -73,7 +73,7 @@ export const PortfolioVideo = () => {
 
             {/* Компаниия */}
             <div>
-              <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center absolute bottom-20 md:bottom-20">
+              <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center absolute bottom-20 md:bottom-10">
                 <h3 className=" text-base md:text-lg text-white uppercase font-bold border-b-[3px] border-red-600 w-28 pb-1">
                   Нам доверяют
                 </h3>
@@ -83,7 +83,7 @@ export const PortfolioVideo = () => {
                       <img
                         src={item.urlImg}
                         alt=""
-                        className="w-24 sm:w-32 md:w-full lg:w-52"
+                        className="w-24 sm:w-32 md:w-full lg:w-32"
                       />
                     </li>
                   );
