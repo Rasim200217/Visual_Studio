@@ -107,8 +107,8 @@ export const PortfolioVideo = () => {
       </div>
 
       <div>
-        <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center mt-20 md:mt-36 px-12">
-          <h3 className=" text-base md:text-lg text-white uppercase font-bold border-b-[3px] border-red-600 w-28 pb-1">
+        <ul className="grid grid-cols-3 md:grid-cols-6 gap-8 md:gap-6 items-center mt-20 md:mt-36 px-6 md:px-12">
+          <h3 className=" text-sm md:text-lg text-white uppercase font-bold border-b-[3px] border-red-600 w-20 md:w-28 pb-1">
             Нам доверяют
           </h3>
           {DateCompany.map((item, index) => {

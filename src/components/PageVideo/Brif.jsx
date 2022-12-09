@@ -96,7 +96,11 @@ export const Brif = () => {
         </h1>
 
         <div className=" text-lg mb-8 flex">
-          <img src={startBriefImg} className="w-28 mr-3" alt="start" />
+          <img
+            src={startBriefImg}
+            className="w-28 mr-3 object-contain"
+            alt="start"
+          />
           <div>
             <p>
               и получите{" "}
