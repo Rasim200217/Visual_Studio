@@ -32,10 +32,10 @@ export const PortfolioVideo = () => {
       <div className="flex justify-between">
         <div
           id="video_portfolio"
-          className="px-6 h-screen sm:px-12 md:px-12 items-center w-full"
+          className="px-6 h-full sm:px-12 md:px-12 items-center w-full"
         >
           <motion.div
-            className="h-full pt-48 flex flex-col justify-start"
+            className="h-full pt-32 flex flex-col justify-start"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -72,24 +72,6 @@ export const PortfolioVideo = () => {
             </div>
 
             {/* Компаниия */}
-            <div>
-              <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center mt-20 md:mt-36">
-                <h3 className=" text-base md:text-lg text-white uppercase font-bold border-b-[3px] border-red-600 w-28 pb-1">
-                  Нам доверяют
-                </h3>
-                {DateCompany.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <img
-                        src={item.urlImg}
-                        alt=""
-                        className="w-24 sm:w-32 md:w-full lg:w-32"
-                      />
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
           </motion.div>
         </div>
 
@@ -122,6 +104,25 @@ export const PortfolioVideo = () => {
           </div>
           <div className="lg:bg-white h-16 m-sm ml-3 mt-10"></div>
         </div>
+      </div>
+
+      <div>
+        <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center mt-20 md:mt-36 px-12">
+          <h3 className=" text-base md:text-lg text-white uppercase font-bold border-b-[3px] border-red-600 w-28 pb-1">
+            Нам доверяют
+          </h3>
+          {DateCompany.map((item, index) => {
+            return (
+              <li key={index}>
+                <img
+                  src={item.urlImg}
+                  alt=""
+                  className="w-24 sm:w-32 md:w-full lg:w-32"
+                />
+              </li>
+            );
+          })}
+        </ul>
       </div>
 
       <div>

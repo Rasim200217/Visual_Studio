@@ -7,7 +7,7 @@ import { MdOutlineSettingsSuggest } from "react-icons/md";
 const ProccesCreate = () => {
   return (
     <motion.div
-      className=" text-white px-8 pb-16"
+      className=" text-white px-12 pb-16 mt-32"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
