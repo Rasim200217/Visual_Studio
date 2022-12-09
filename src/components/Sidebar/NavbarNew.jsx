@@ -19,7 +19,7 @@ const NavbarNew = () => {
           <SideBar />
         </Drawer>
 
-        <Group position="center">
+        <Group position="center" className="">
           <Button onClick={() => setOpened(true)} className="lg:hidden">
             <HiOutlineMenuAlt4 size={20} />
           </Button>

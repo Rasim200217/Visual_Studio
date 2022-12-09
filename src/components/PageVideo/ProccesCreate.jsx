@@ -14,7 +14,7 @@ const ProccesCreate = () => {
     >
       <div className="flex">
         <MdOutlineSettingsSuggest size={50} />
-        <h4 className="text-lg uppercase font-bold ml-4">
+        <h4 className=" md:text-lg uppercase font-bold ml-4">
           Процесс создания видео включает <br /> в себя три основных этапа:
         </h4>
       </div>

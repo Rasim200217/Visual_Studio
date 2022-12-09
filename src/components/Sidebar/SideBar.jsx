@@ -81,8 +81,13 @@ const SideBar = () => {
                     <li className="-mt-2">
                       <NavLink to="/vs21/cyclorama">Циклорама</NavLink>
                     </li>
-                    <li className="-mt-2">Хромакей</li>
-                    <li className="-mt-2">Лофт</li>
+                    <li className="-mt-2">
+                      <NavLink to="/vs21/chromakey">Хромакей</NavLink>
+                    </li>
+
+                    <li className="-mt-2">
+                      <NavLink to="/vs21/loft">Лофт</NavLink>
+                    </li>
                   </div>
                 ) : (
                   ""
@@ -105,7 +110,7 @@ const SideBar = () => {
                   <div className="ml-6">
                     <li className="-mt-2">
                       <a
-                        href="https://telegra.ph/Aktualnye-ceny-Prajs-list-VS21ART-2022-10-06"
+                        href="https://telegra.ph/Aktualnye-ceny-Prajs-list-VS21ART-2022-12-08"
                         target="_blank"
                         rel="noreferrer"
                       >

@@ -73,7 +73,7 @@ export const PortfolioVideo = () => {
 
             {/* Компаниия */}
             <div>
-              <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center absolute bottom-20 md:bottom-10">
+              <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center mt-20 md:mt-36">
                 <h3 className=" text-base md:text-lg text-white uppercase font-bold border-b-[3px] border-red-600 w-28 pb-1">
                   Нам доверяют
                 </h3>

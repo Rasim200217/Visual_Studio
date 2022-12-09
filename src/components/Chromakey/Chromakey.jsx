@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import {
   BsTextareaResize,
-  BsFillCollectionFill,
   BsFillMapFill,
+  BsBriefcaseFill,
 } from "react-icons/bs";
 
 import {
   FaWifi,
   FaShower,
   FaThermometerHalf,
-  FaUmbrellaBeach,
   FaBolt,
+  FaGripVertical,
 } from "react-icons/fa";
 
 import { AiOutlineClose } from "react-icons/ai";
 
 import Vs21Video from "../../assets/studioMove.mov";
 import { Footer } from "../Footer";
-import FormCyclorama from "./FormCyclorama";
+import FormChromakey from "./FormChromakey";
 
-import Img1 from "../../assets/slideStudio/slide_7.jpg";
-import Img2 from "../../assets/slideStudio/slide_8.jpg";
-import Img3 from "../../assets/slideStudio/slide_9.jpg";
+import Img1 from "../../assets/slideStudio/slide_4.jpg";
+import Img2 from "../../assets/slideStudio/slide_5.jpg";
+import Img3 from "../../assets/slideStudio/slide_6.jpg";
 import { HashLink } from "react-router-hash-link";
 
 import Modal from "@mui/material/Modal";
@@ -52,7 +52,7 @@ const date = [
   },
 ];
 
-const Cyclorama = () => {
+const Chromakey = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -86,12 +86,14 @@ const Cyclorama = () => {
       <div className="px-12 py-20">
         <div>
           <h2 className=" text-yellow-300 font-bold text-3xl sm:text-6xl">
-            Белая циклорама
+            Хромакей циклорама
           </h2>
           <p className="text-white mt-4 sm:mt-8 text-sm leading-6 wText">
-            Зал с большой циклорамой 5х5м с обилием реквизита и аксессуаров для
-            съемки. Зал идеально подходит для съемки лукбуков и минималистичных
-            имиджевых фотосессий, или видеосъемок.
+            Зал с хромакей циклорамой 6х6м и высотой потолков 3.2м. Циклорама
+            оснащена фермой для крепления осветительного оборудования. Зал
+            подходит для съемки контента и ведения прямых трансляций с любыми
+            виртуальными декорациями. Предусмотрена большая рабочая зона для
+            съёмочной группы.
           </p>
 
           <div className=" grid grid-cols-2 md:grid-cols-4 mt-7 gap-6">
@@ -100,15 +102,15 @@ const Cyclorama = () => {
                 <BsTextareaResize size={30} />
               </div>
               <p className="inline-block font-medium text-xs md:text-sm w-40 md:w-46 uppercase  text-center pt-3">
-                Размер циклорамы 5х5м
+                Размер циклорамы 6х6м
               </p>
             </div>
             <div className="flex flex-col items-center">
               <div className=" bg-[#1B1A20] p-4 rounded-xl">
-                <BsFillCollectionFill size={30} />
+                <FaGripVertical size={30} />
               </div>
               <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                Система цветных фонов из 5 штук
+                Ферма для крепления осветительного оборудования
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -132,7 +134,7 @@ const Cyclorama = () => {
                 <BsFillMapFill size={30} />
               </div>
               <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                Гримерка/Примерочная
+                VIP Гримерка
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -140,7 +142,7 @@ const Cyclorama = () => {
                 <FaBolt size={30} />
               </div>
               <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                220/380В 32А
+                220/380В 32А/63А
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -148,15 +150,18 @@ const Cyclorama = () => {
                 <FaWifi size={30} />
               </div>
               <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                Wi-Fi 100 Mb/s
+                Wi-Fi 100 Mb/s <br />
+                <span className=" lowercase">
+                  (с возможностью проводного подключения)
+                </span>
               </p>
             </div>
             <div className="flex flex-col items-center">
               <div className=" bg-[#1B1A20] p-4 rounded-xl">
-                <FaUmbrellaBeach size={30} />
+                <BsBriefcaseFill size={30} />
               </div>
               <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                Просторная зона отдыха
+                Просторная рабочая зона 6х7 м
               </p>
             </div>
           </div>
@@ -389,9 +394,9 @@ const Cyclorama = () => {
         </div>
       </div>
       <Footer />
-      <FormCyclorama />
+      <FormChromakey />
     </div>
   );
 };
 
-export default Cyclorama;
+export default Chromakey;

@@ -1,27 +1,17 @@
 import React, { useState } from "react";
-import {
-  BsTextareaResize,
-  BsFillCollectionFill,
-  BsFillMapFill,
-} from "react-icons/bs";
+import { BsSquare, BsFillMapFill } from "react-icons/bs";
 
-import {
-  FaWifi,
-  FaShower,
-  FaThermometerHalf,
-  FaUmbrellaBeach,
-  FaBolt,
-} from "react-icons/fa";
+import { FaWifi, FaShower, FaBolt, FaExpandAlt } from "react-icons/fa";
 
 import { AiOutlineClose } from "react-icons/ai";
 
 import Vs21Video from "../../assets/studioMove.mov";
 import { Footer } from "../Footer";
-import FormCyclorama from "./FormCyclorama";
+import FormLoft from "./FormLoft";
 
-import Img1 from "../../assets/slideStudio/slide_7.jpg";
-import Img2 from "../../assets/slideStudio/slide_8.jpg";
-import Img3 from "../../assets/slideStudio/slide_9.jpg";
+import Img1 from "../../assets/slideStudio/slide_1.jpg";
+import Img2 from "../../assets/slideStudio/slide_2.jpg";
+import Img3 from "../../assets/slideStudio/slide_3.jpg";
 import { HashLink } from "react-router-hash-link";
 
 import Modal from "@mui/material/Modal";
@@ -52,7 +42,7 @@ const date = [
   },
 ];
 
-const Cyclorama = () => {
+const Loft = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -86,39 +76,23 @@ const Cyclorama = () => {
       <div className="px-12 py-20">
         <div>
           <h2 className=" text-yellow-300 font-bold text-3xl sm:text-6xl">
-            Белая циклорама
+            Лофт
           </h2>
           <p className="text-white mt-4 sm:mt-8 text-sm leading-6 wText">
-            Зал с большой циклорамой 5х5м с обилием реквизита и аксессуаров для
-            съемки. Зал идеально подходит для съемки лукбуков и минималистичных
-            имиджевых фотосессий, или видеосъемок.
+            Зал в стиле лофт. Идеально подойдет для семейных, фэшн и предметных
+            съемок. В зале имеются большие панорамные окна.
           </p>
 
           <div className=" grid grid-cols-2 md:grid-cols-4 mt-7 gap-6">
             <div className="flex flex-col items-center">
               <div className=" bg-[#1B1A20] p-4 rounded-xl">
-                <BsTextareaResize size={30} />
+                <BsSquare size={30} />
               </div>
               <p className="inline-block font-medium text-xs md:text-sm w-40 md:w-46 uppercase  text-center pt-3">
-                Размер циклорамы 5х5м
+                Панорамные окна
               </p>
             </div>
-            <div className="flex flex-col items-center">
-              <div className=" bg-[#1B1A20] p-4 rounded-xl">
-                <BsFillCollectionFill size={30} />
-              </div>
-              <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                Система цветных фонов из 5 штук
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className=" bg-[#1B1A20] p-4 rounded-xl">
-                <FaThermometerHalf size={30} />
-              </div>
-              <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                Теплые полы
-              </p>
-            </div>
+
             <div className="flex flex-col items-center">
               <div className=" bg-[#1B1A20] p-4 rounded-xl">
                 <FaShower size={30} />
@@ -140,7 +114,7 @@ const Cyclorama = () => {
                 <FaBolt size={30} />
               </div>
               <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                220/380В 32А
+                220/380В 32А/63А
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -153,10 +127,10 @@ const Cyclorama = () => {
             </div>
             <div className="flex flex-col items-center">
               <div className=" bg-[#1B1A20] p-4 rounded-xl">
-                <FaUmbrellaBeach size={30} />
+                <FaExpandAlt size={30} />
               </div>
               <p className="inline-block font-medium uppercase text-xs md:text-sm w-40 md:w-48 text-center pt-3">
-                Просторная зона отдыха
+                Возможность перестановки под ваши задачи
               </p>
             </div>
           </div>
@@ -389,9 +363,9 @@ const Cyclorama = () => {
         </div>
       </div>
       <Footer />
-      <FormCyclorama />
+      <FormLoft />
     </div>
   );
 };
 
-export default Cyclorama;
+export default Loft;

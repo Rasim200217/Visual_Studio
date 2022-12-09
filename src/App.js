@@ -9,6 +9,8 @@ import { PortfolioVideo } from "./components/PageVideo/PortfolioVideo";
 import { PageNotFound } from "./components/PageNotFound/PageNotFound";
 import NavbarNew from "./components/Sidebar/NavbarNew";
 import Cyclorama from "./components/Cyclorama/Cyclorama";
+import Chromakey from "./components/Chromakey/Chromakey";
+import Loft from "./components/Loft/Loft";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/render" element={<PortfolioVideo />} />
           <Route path="/vs21/retouch" element={<Retouch />} />
           <Route path="/vs21/cyclorama" element={<Cyclorama />} />
+          <Route path="/vs21/chromakey" element={<Chromakey />} />
+          <Route path="/vs21/loft" element={<Loft />} />
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </div>
