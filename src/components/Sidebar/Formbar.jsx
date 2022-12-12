@@ -59,14 +59,14 @@ const Formbar = () => {
 
   return (
     <div>
-      <div className="text-center mt-8">
+      <div className="text-center mt-4">
         <a href="tel:+998903333366">
           <div className=" cursor-pointer hover:text-yellow-300 btn-hover">
             <p className="font-medium text-base"> +998 (90) 333-33-66</p>
           </div>
         </a>
         <button
-          className="mt-6 font-bold hover:text-yellow-300 btn-hover border-b hover:border-none"
+          className="mt-3 font-bold hover:text-yellow-300 btn-hover border-b hover:border-none"
           onClick={handleOpen}
         >
           Обратный звонок

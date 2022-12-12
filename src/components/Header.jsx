@@ -32,7 +32,7 @@ export const Header = () => {
     >
       <div
         id="header"
-        className="flex right-0 justify-between h-full px-8 sm:px-8 md:px-8 items-center py-36"
+        className="flex right-0 justify-between h-full px-8 sm:px-8 md:px-8 items-center py-24"
       >
         <div>
           <div>
